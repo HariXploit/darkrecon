@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DarkRecon Report — google.com</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0f1117; color: #e2e8f0; line-height: 1.6; }
+  .header { background: linear-gradient(135deg, #1a1f2e, #0f1117); border-bottom: 1px solid #2d3748; padding: 2rem; }
+  .header h1 { font-size: 1.8rem; color: #63b3ed; } .header p { color: #a0aec0; margin-top: 0.3rem; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+  .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+  .stat-card { background: #1a1f2e; border: 1px solid #2d3748; border-radius: 8px; padding: 1.2rem; text-align: center; }
+  .stat-card .number { font-size: 2rem; font-weight: 700; color: #63b3ed; }
+  .stat-card .label { font-size: 0.8rem; color: #a0aec0; text-transform: uppercase; letter-spacing: .05em; margin-top: 4px; }
+  h2 { font-size: 1.2rem; color: #63b3ed; margin: 2rem 0 1rem; border-bottom: 1px solid #2d3748; padding-bottom: 0.5rem; }
+  table { width: 100%; border-collapse: collapse; background: #1a1f2e; border-radius: 8px; overflow: hidden; }
+  th { background: #2d3748; padding: 10px 14px; text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: .05em; color: #a0aec0; }
+  td { padding: 10px 14px; border-bottom: 1px solid #2d3748; font-size: 13px; }
+  td a { color: #63b3ed; text-decoration: none; } td a:hover { text-decoration: underline; }
+  tr:last-child td { border-bottom: none; }
+  .grade { display: inline-block; padding: 2px 10px; border-radius: 99px; font-size: 12px; font-weight: 700; color: #fff; }
+  .bad { color: #fc8181; } .good { color: #68d391; }
+  .finding-card { background: #1a1f2e; border: 1px solid #2d3748; border-radius: 8px; margin-bottom: 1rem; overflow: hidden; }
+  .finding-header { background: #2d3748; padding: 12px 16px; display: flex; justify-content: space-between; align-items: center; }
+  .finding-url { font-family: monospace; font-size: 13px; color: #63b3ed; }
+  .finding-section { padding: 14px 16px; border-top: 1px solid #2d3748; }
+  .finding-section h4 { font-size: 12px; text-transform: uppercase; letter-spacing: .05em; color: #a0aec0; margin-bottom: 10px; }
+  .finding-section ul { list-style: none; }
+  .finding-section li { padding: 6px 0; border-bottom: 1px solid #2d3748; font-size: 13px; }
+  .finding-section li:last-child { border-bottom: none; }
+  .finding-section code { display: block; margin-top: 4px; font-size: 11px; color: #68d391; background: #0f1117; padding: 4px 8px; border-radius: 4px; }
+  .severity-badge { display: inline-block; font-size: 10px; padding: 1px 7px; border-radius: 99px; color: #fff; margin-right: 6px; font-weight: 600; }
+  .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
+  .gallery-item { background: #1a1f2e; border: 1px solid #2d3748; border-radius: 8px; overflow: hidden; }
+  .gallery-item img { width: 100%; height: 140px; object-fit: cover; }
+  .gallery-item p { font-size: 11px; color: #a0aec0; padding: 6px 10px; word-break: break-all; }
+  .muted { color: #a0aec0; font-size: 13px; }
+  .footer { text-align: center; padding: 2rem; color: #4a5568; font-size: 12px; border-top: 1px solid #2d3748; margin-top: 2rem; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>DarkRecon Report</h1>
+  <p>Target: <strong>google.com</strong> &nbsp;|&nbsp; 2026-07-05 20:57:30 &nbsp;|&nbsp; Completed in 153.17s</p>
+</div>
+<div class="container">
+
+  <div class="stats-grid">
+    <div class="stat-card"><div class="number">19</div><div class="label">Subdomains Found</div></div>
+    <div class="stat-card"><div class="number">15</div><div class="label">Live Hosts</div></div>
+    <div class="stat-card"><div class="number" style="color:#fc8181">63</div><div class="label">Missing Headers</div></div>
+    <div class="stat-card"><div class="number" style="color:#f6ad55">10</div><div class="label">Leaky Headers</div></div>
+    <div class="stat-card"><div class="number">0</div><div class="label">Screenshots</div></div>
+    <div class="stat-card"><div class="number">153.17s</div><div class="label">Total Time</div></div>
+  </div>
+
+  <h2>Subdomains (19)</h2>
+  <table>
+    <thead><tr><th>Subdomain</th></tr></thead>
+    <tbody><tr><td>admin.google.com</td></tr><tr><td>api.google.com</td></tr><tr><td>blog.google.com</td></tr><tr><td>corp.google.com</td></tr><tr><td>docs.google.com</td></tr><tr><td>download.google.com</td></tr><tr><td>help.google.com</td></tr><tr><td>mail.google.com</td></tr><tr><td>mobile.google.com</td></tr><tr><td>ns1.google.com</td></tr><tr><td>ns2.google.com</td></tr><tr><td>sandbox.google.com</td></tr><tr><td>shop.google.com</td></tr><tr><td>smtp.google.com</td></tr><tr><td>store.google.com</td></tr><tr><td>support.google.com</td></tr><tr><td>upload.google.com</td></tr><tr><td>vpn.google.com</td></tr><tr><td>www.google.com</td></tr></tbody>
+  </table>
+
+  <h2>Live Hosts — Security Header Overview</h2>
+  <table>
+    <thead><tr><th>URL</th><th>Status</th><th>Grade</th><th>Score</th><th>Missing Headers</th><th>Leaky Headers</th></tr></thead>
+    <tbody>
+            <tr>
+                <td><a href="https://upload.google.com" target="_blank">https://upload.google.com</a></td>
+                <td>404</td>
+                <td><span class="grade" style="background:#e74c3c">F</span></td>
+                <td>14/100</td>
+                <td class="bad">6</td>
+                <td class="good">0</td>
+            </tr>
+            <tr>
+                <td><a href="https://api.google.com" target="_blank">https://api.google.com</a></td>
+                <td>404</td>
+                <td><span class="grade" style="background:#e74c3c">F</span></td>
+                <td>14/100</td>
+                <td class="bad">6</td>
+                <td class="good">0</td>
+            </tr>
+            <tr>
+                <td><a href="https://download.google.com" target="_blank">https://download.google.com</a></td>
+                <td>404</td>
+                <td><span class="grade" style="background:#e74c3c">F</span></td>
+                <td>14/100</td>
+                <td class="bad">6</td>
+                <td class="good">0</td>
+            </tr>
+            <tr>
+                <td><a href="https://sandbox.google.com" target="_blank">https://sandbox.google.com</a></td>
+                <td>404</td>
+                <td><span class="grade" style="background:#e74c3c">F</span></td>
+                <td>14/100</td>
+                <td class="bad">6</td>
+                <td class="good">0</td>
+            </tr>
+            <tr>
+                <td><a href="https://corp.google.com" target="_blank">https://corp.google.com</a></td>
+                <td>400</td>
+                <td><span class="grade" style="background:#e74c3c">F</span></td>
+                <td>14/100</td>
+                <td class="bad">6</td>
+                <td class="good">0</td>
+            </tr>
+            <tr>
+                <td><a href="https://www.google.com" target="_blank">https://www.google.com</a></td>
+                <td>200</td>
+                <td><span class="grade" style="background:#e74c3c">F</span></td>
+                <td>29/100</td>
+                <td class="bad">5</td>
+                <td class="bad">1</td>
+            </tr>
+            <tr>
+                <td><a href="https://shop.google.com" target="_blank">https://shop.google.com</a></td>
+                <td>200</td>
+                <td><span class="grade" style="background:#e67e22">D</span></td>
+                <td>43/100</td>
+                <td class="bad">4</td>
+                <td class="bad">1</td>
+            </tr>
+            <tr>
+                <td><a href="https://support.google.com" target="_blank">https://support.google.com</a></td>
+                <td>200</td>
+                <td><span class="grade" style="background:#e67e22">D</span></td>
+                <td>57/100</td>
+                <td class="bad">3</td>
+                <td class="bad">1</td>
+            </tr>
+            <tr>
+                <td><a href="https://store.google.com" target="_blank">https://store.google.com</a></td>
+                <td>200</td>
+                <td><span class="grade" style="background:#2ecc71">B</span></td>
+                <td>86/100</td>
+                <td class="bad">1</td>
+                <td class="bad">1</td>
+            </tr>
+            <tr>
+                <td><a href="https://help.google.com" target="_blank">https://help.google.com</a></td>
+                <td>200</td>
+                <td><span class="grade" style="background:#e67e22">D</span></td>
+                <td>57/100</td>
+                <td class="bad">3</td>
+                <td class="bad">1</td>
+            </tr>
+            <tr>
+                <td><a href="https://docs.google.com" target="_blank">https://docs.google.com</a></td>
+                <td>200</td>
+                <td><span class="grade" style="background:#2ecc71">B</span></td>
+                <td>86/100</td>
+                <td class="bad">1</td>
+                <td class="bad">1</td>
+            </tr>
+            <tr>
+                <td><a href="https://blog.google.com" target="_blank">https://blog.google.com</a></td>
+                <td>200</td>
+                <td><span class="grade" style="background:#e74c3c">F</span></td>
+                <td>14/100</td>
+                <td class="bad">6</td>
+                <td class="bad">1</td>
+            </tr>
+            <tr>
+                <td><a href="https://mobile.google.com" target="_blank">https://mobile.google.com</a></td>
+                <td>200</td>
+                <td><span class="grade" style="background:#e67e22">D</span></td>
+                <td>57/100</td>
+                <td class="bad">3</td>
+                <td class="bad">1</td>
+            </tr>
+            <tr>
+                <td><a href="https://mail.google.com" target="_blank">https://mail.google.com</a></td>
+                <td>200</td>
+                <td><span class="grade" style="background:#2ecc71">B</span></td>
+                <td>86/100</td>
+                <td class="bad">1</td>
+                <td class="bad">1</td>
+            </tr>
+            <tr>
+                <td><a href="https://admin.google.com" target="_blank">https://admin.google.com</a></td>
+                <td>302</td>
+                <td><span class="grade" style="background:#e74c3c">F</span></td>
+                <td>14/100</td>
+                <td class="bad">6</td>
+                <td class="bad">1</td>
+            </tr></tbody>
+  </table>
+
+  <h2>Detailed Security Findings</h2>
+  
+            <div class="finding-card">
+                <div class="finding-header">
+                    <span class="finding-url">https://upload.google.com</span>
+                    <span class="grade" style="background:#e74c3c">F (14/100)</span>
+                </div><div class='finding-section'><h4>Missing Security Headers</h4><ul>
+                    <li>
+                        <span class="severity-badge" style="background:#e74c3c">High</span>
+                        <strong>Strict-Transport-Security</strong> — Enforces HTTPS — prevents SSL stripping attacks<br>
+                        <code>Recommendation: Strict-Transport-Security: max-age=31536000; includeSubDomains; preload</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#e74c3c">High</span>
+                        <strong>Content-Security-Policy</strong> — Controls which resources can load — prevents XSS<br>
+                        <code>Recommendation: Content-Security-Policy: default-src 'self'; script-src 'self'</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#e67e22">Medium</span>
+                        <strong>X-Frame-Options</strong> — Prevents clickjacking via iframe embedding<br>
+                        <code>Recommendation: X-Frame-Options: DENY</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#e67e22">Medium</span>
+                        <strong>X-Content-Type-Options</strong> — Prevents MIME sniffing — stops browser from guessing content type<br>
+                        <code>Recommendation: X-Content-Type-Options: nosniff</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#3498db">Low</span>
+                        <strong>Permissions-Policy</strong> — Controls browser feature access (camera, microphone, geolocation)<br>
+                        <code>Recommendation: Permissions-Policy: geolocation=(), microphone=(), camera=()</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#95a5a6">Info</span>
+                        <strong>X-XSS-Protection</strong> — Legacy XSS filter for older browsers<br>
+                        <code>Recommendation: X-XSS-Protection: 1; mode=block</code>
+                    </li></ul></div></div>
+            <div class="finding-card">
+                <div class="finding-header">
+                    <span class="finding-url">https://api.google.com</span>
+                    <span class="grade" style="background:#e74c3c">F (14/100)</span>
+                </div><div class='finding-section'><h4>Missing Security Headers</h4><ul>
+                    <li>
+                        <span class="severity-badge" style="background:#e74c3c">High</span>
+                        <strong>Strict-Transport-Security</strong> — Enforces HTTPS — prevents SSL stripping attacks<br>
+                        <code>Recommendation: Strict-Transport-Security: max-age=31536000; includeSubDomains; preload</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#e74c3c">High</span>
+                        <strong>Content-Security-Policy</strong> — Controls which resources can load — prevents XSS<br>
+                        <code>Recommendation: Content-Security-Policy: default-src 'self'; script-src 'self'</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#e67e22">Medium</span>
+                        <strong>X-Frame-Options</strong> — Prevents clickjacking via iframe embedding<br>
+                        <code>Recommendation: X-Frame-Options: DENY</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#e67e22">Medium</span>
+                        <strong>X-Content-Type-Options</strong> — Prevents MIME sniffing — stops browser from guessing content type<br>
+                        <code>Recommendation: X-Content-Type-Options: nosniff</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#3498db">Low</span>
+                        <strong>Permissions-Policy</strong> — Controls browser feature access (camera, microphone, geolocation)<br>
+                        <code>Recommendation: Permissions-Policy: geolocation=(), microphone=(), camera=()</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#95a5a6">Info</span>
+                        <strong>X-XSS-Protection</strong> — Legacy XSS filter for older browsers<br>
+                        <code>Recommendation: X-XSS-Protection: 1; mode=block</code>
+                    </li></ul></div></div>
+            <div class="finding-card">
+                <div class="finding-header">
+                    <span class="finding-url">https://download.google.com</span>
+                    <span class="grade" style="background:#e74c3c">F (14/100)</span>
+                </div><div class='finding-section'><h4>Missing Security Headers</h4><ul>
+                    <li>
+                        <span class="severity-badge" style="background:#e74c3c">High</span>
+                        <strong>Strict-Transport-Security</strong> — Enforces HTTPS — prevents SSL stripping attacks<br>
+                        <code>Recommendation: Strict-Transport-Security: max-age=31536000; includeSubDomains; preload</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#e74c3c">High</span>
+                        <strong>Content-Security-Policy</strong> — Controls which resources can load — prevents XSS<br>
+                        <code>Recommendation: Content-Security-Policy: default-src 'self'; script-src 'self'</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#e67e22">Medium</span>
+                        <strong>X-Frame-Options</strong> — Prevents clickjacking via iframe embedding<br>
+                        <code>Recommendation: X-Frame-Options: DENY</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#e67e22">Medium</span>
+                        <strong>X-Content-Type-Options</strong> — Prevents MIME sniffing — stops browser from guessing content type<br>
+                        <code>Recommendation: X-Content-Type-Options: nosniff</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#3498db">Low</span>
+                        <strong>Permissions-Policy</strong> — Controls browser feature access (camera, microphone, geolocation)<br>
+                        <code>Recommendation: Permissions-Policy: geolocation=(), microphone=(), camera=()</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#95a5a6">Info</span>
+                        <strong>X-XSS-Protection</strong> — Legacy XSS filter for older browsers<br>
+                        <code>Recommendation: X-XSS-Protection: 1; mode=block</code>
+                    </li></ul></div></div>
+            <div class="finding-card">
+                <div class="finding-header">
+                    <span class="finding-url">https://sandbox.google.com</span>
+                    <span class="grade" style="background:#e74c3c">F (14/100)</span>
+                </div><div class='finding-section'><h4>Missing Security Headers</h4><ul>
+                    <li>
+                        <span class="severity-badge" style="background:#e74c3c">High</span>
+                        <strong>Strict-Transport-Security</strong> — Enforces HTTPS — prevents SSL stripping attacks<br>
+                        <code>Recommendation: Strict-Transport-Security: max-age=31536000; includeSubDomains; preload</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#e74c3c">High</span>
+                        <strong>Content-Security-Policy</strong> — Controls which resources can load — prevents XSS<br>
+                        <code>Recommendation: Content-Security-Policy: default-src 'self'; script-src 'self'</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#e67e22">Medium</span>
+                        <strong>X-Frame-Options</strong> — Prevents clickjacking via iframe embedding<br>
+                        <code>Recommendation: X-Frame-Options: DENY</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#e67e22">Medium</span>
+                        <strong>X-Content-Type-Options</strong> — Prevents MIME sniffing — stops browser from guessing content type<br>
+                        <code>Recommendation: X-Content-Type-Options: nosniff</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#3498db">Low</span>
+                        <strong>Permissions-Policy</strong> — Controls browser feature access (camera, microphone, geolocation)<br>
+                        <code>Recommendation: Permissions-Policy: geolocation=(), microphone=(), camera=()</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#95a5a6">Info</span>
+                        <strong>X-XSS-Protection</strong> — Legacy XSS filter for older browsers<br>
+                        <code>Recommendation: X-XSS-Protection: 1; mode=block</code>
+                    </li></ul></div></div>
+            <div class="finding-card">
+                <div class="finding-header">
+                    <span class="finding-url">https://corp.google.com</span>
+                    <span class="grade" style="background:#e74c3c">F (14/100)</span>
+                </div><div class='finding-section'><h4>Missing Security Headers</h4><ul>
+                    <li>
+                        <span class="severity-badge" style="background:#e74c3c">High</span>
+                        <strong>Strict-Transport-Security</strong> — Enforces HTTPS — prevents SSL stripping attacks<br>
+                        <code>Recommendation: Strict-Transport-Security: max-age=31536000; includeSubDomains; preload</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#e74c3c">High</span>
+                        <strong>Content-Security-Policy</strong> — Controls which resources can load — prevents XSS<br>
+                        <code>Recommendation: Content-Security-Policy: default-src 'self'; script-src 'self'</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#e67e22">Medium</span>
+                        <strong>X-Frame-Options</strong> — Prevents clickjacking via iframe embedding<br>
+                        <code>Recommendation: X-Frame-Options: DENY</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#e67e22">Medium</span>
+                        <strong>X-Content-Type-Options</strong> — Prevents MIME sniffing — stops browser from guessing content type<br>
+                        <code>Recommendation: X-Content-Type-Options: nosniff</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#3498db">Low</span>
+                        <strong>Referrer-Policy</strong> — Controls how much referrer info is sent to other sites<br>
+                        <code>Recommendation: Referrer-Policy: strict-origin-when-cross-origin</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#95a5a6">Info</span>
+                        <strong>X-XSS-Protection</strong> — Legacy XSS filter for older browsers<br>
+                        <code>Recommendation: X-XSS-Protection: 1; mode=block</code>
+                    </li></ul></div></div>
+            <div class="finding-card">
+                <div class="finding-header">
+                    <span class="finding-url">https://blog.google.com</span>
+                    <span class="grade" style="background:#e74c3c">F (14/100)</span>
+                </div><div class='finding-section'><h4>Missing Security Headers</h4><ul>
+                    <li>
+                        <span class="severity-badge" style="background:#e74c3c">High</span>
+                        <strong>Strict-Transport-Security</strong> — Enforces HTTPS — prevents SSL stripping attacks<br>
+                        <code>Recommendation: Strict-Transport-Security: max-age=31536000; includeSubDomains; preload</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#e67e22">Medium</span>
+                        <strong>X-Frame-Options</strong> — Prevents clickjacking via iframe embedding<br>
+                        <code>Recommendation: X-Frame-Options: DENY</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#e67e22">Medium</span>
+                        <strong>X-Content-Type-Options</strong> — Prevents MIME sniffing — stops browser from guessing content type<br>
+                        <code>Recommendation: X-Content-Type-Options: nosniff</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#3498db">Low</span>
+                        <strong>Referrer-Policy</strong> — Controls how much referrer info is sent to other sites<br>
+                        <code>Recommendation: Referrer-Policy: strict-origin-when-cross-origin</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#3498db">Low</span>
+                        <strong>Permissions-Policy</strong> — Controls browser feature access (camera, microphone, geolocation)<br>
+                        <code>Recommendation: Permissions-Policy: geolocation=(), microphone=(), camera=()</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#95a5a6">Info</span>
+                        <strong>X-XSS-Protection</strong> — Legacy XSS filter for older browsers<br>
+                        <code>Recommendation: X-XSS-Protection: 1; mode=block</code>
+                    </li></ul></div><div class='finding-section'><h4>Tech Stack Leakage</h4><ul><li><strong>Server:</strong> Google Frontend <em>— Reveals technology stack — aids attacker fingerprinting</em></li></ul></div><div class='finding-section'><h4>Weak Header Values</h4><ul><li><strong>Content-Security-Policy:</strong> default-src 'self' *.gstatic.com storage.googleapis.com; script-src 'self' 'strict-dynamic' 'unsafe-inline' *.googleanalytics.com *.google-analytics.com *.youtube.com youtube.com optimize.google.com https://s.ytimg.com *.googletagmanager.com storage.googleapis.com *.googleapis.com *.google.com cdn.ampproject.org *.gstatic.com gstatic.com googleadservices.com *.googleadservices.com 'sha256-hdPneczWRi+c9LQVo+PzNzlNr9TacChC0CW0fiDBHkI=' 'sha256-DE/j4w1a1HDIXysWgFTrJCJK6JWEcHqScfyMr9zq9R4=' 'sha256-Ehy9lGqrTi8OqqWxX1HN6hKJT7iwwYMFJ+HLjpEobO0=' 'sha256-s/yvuH0ZHyO+7N8dM5CshPem4K1PknDExYN18xHq0LI=' 'sha256-MWQdkIAX5J//suH1t5P3PFFwFUiphY0PxD6VVzbBehQ=' 'sha256-587vJAV9t9k86IMQixmyKa7lbPaDhkGzrJsdngtoiAA=' 'sha256-nlbIOie3vmdUUZjQFDMa7iipxS6Qst8pPhTLjibMsRk=' 'sha256-+LJ+tgqOXIri3+D/uJC785tov3eXewv8x+Pkenx+3Z8=' 'sha256-PnD9J8UK8zpwVizQXkEtbZOvTiv9C/05Nn81NEwPBoQ=' 'sha256-LH1mE8uiAlSGs6/ejmL47sTk8G+/Hh6T1ydVxa0idaM=' 'sha256-GuPeLJgWIkkS7hCKcSc+mQs6jTN0D8QzfW624B4OMME=' 'sha256-CDqe41szG4ZmAxS54wSNKisRTrwu1wxcuRQv09PB3Nk=' 'sha256-Xyk5Ei/Yh7DuZgaxNfbPswkpmMKHk5Jy18vkxjfPMj0=' 'sha256-Q+8W9SyZ6wnayM05rLv0YuHooUH/nnzpE2XQZJ/ekjY=' 'sha256-1lOrojGb+aoV56bZpsODLpb+j+HHbONNEpX/YqVtiUU=' 'sha256-sAsQphoZozaLVFpcda3bvT5euqcGL4MqVnizAR+Xla4=' 'sha256-ZlqdbaXB1F4Evuv/nmY3QGBLFBbrfiNndyYxbgdQn7g=' 'sha256-OEwIbDcQTxJYhU2ONmKA0LutIDdkmge2c+9IPFv5vFE=' 'sha256-Iz9ZZz/rHQFiJs2bKOHSC82gR0WdD/37qrPCB65PCFg='; font-src 'self' themes.googleusercontent.com *.gstatic.com https://fonts.gstatic.com storage.googleapis.com fonts.googleapis.com *.cdn.ampproject.org; img-src * data: blob:; require-trusted-types-for 'script'; object-src 'none'; connect-src 'self' cdn.ampproject.org *.google.com storage.googleapis.com https://services.google.com/fb/submissions/thekeywordtest/ https://services.google.com/fb/submissions/0a65d7733e1f11ea9701614fc033d30c/ *.gstatic.com gstatic.com *.cdn.ampproject.org *.doubleclick.net https://readaloud.googleapis.com/ *.google-analytics.com https://www.youtube.com/; style-src 'self' 'unsafe-inline' fonts.googleapis.com *.gstatic.com storage.googleapis.com *.google.com cdn.ampproject.org gstatic.com; frame-src 'self' www.google.com *.youtube.com youtube.com accounts.google.com *.doubleclick.net apis.google.com optimize.google.com *.google.com *.withgoogle.com *.cdn.ampproject.org https://www.gstatic.com/ https://www.youtube-nocookie.com/; media-src 'self' data: *.gstatic.com storage.googleapis.com *.googlevideo.com; base-uri 'none' — <em>Contains dangerous value: 'unsafe-inline'</em></li><li><strong>Content-Security-Policy:</strong> default-src 'self' *.gstatic.com storage.googleapis.com; script-src 'self' 'strict-dynamic' 'unsafe-inline' *.googleanalytics.com *.google-analytics.com *.youtube.com youtube.com optimize.google.com https://s.ytimg.com *.googletagmanager.com storage.googleapis.com *.googleapis.com *.google.com cdn.ampproject.org *.gstatic.com gstatic.com googleadservices.com *.googleadservices.com 'sha256-hdPneczWRi+c9LQVo+PzNzlNr9TacChC0CW0fiDBHkI=' 'sha256-DE/j4w1a1HDIXysWgFTrJCJK6JWEcHqScfyMr9zq9R4=' 'sha256-Ehy9lGqrTi8OqqWxX1HN6hKJT7iwwYMFJ+HLjpEobO0=' 'sha256-s/yvuH0ZHyO+7N8dM5CshPem4K1PknDExYN18xHq0LI=' 'sha256-MWQdkIAX5J//suH1t5P3PFFwFUiphY0PxD6VVzbBehQ=' 'sha256-587vJAV9t9k86IMQixmyKa7lbPaDhkGzrJsdngtoiAA=' 'sha256-nlbIOie3vmdUUZjQFDMa7iipxS6Qst8pPhTLjibMsRk=' 'sha256-+LJ+tgqOXIri3+D/uJC785tov3eXewv8x+Pkenx+3Z8=' 'sha256-PnD9J8UK8zpwVizQXkEtbZOvTiv9C/05Nn81NEwPBoQ=' 'sha256-LH1mE8uiAlSGs6/ejmL47sTk8G+/Hh6T1ydVxa0idaM=' 'sha256-GuPeLJgWIkkS7hCKcSc+mQs6jTN0D8QzfW624B4OMME=' 'sha256-CDqe41szG4ZmAxS54wSNKisRTrwu1wxcuRQv09PB3Nk=' 'sha256-Xyk5Ei/Yh7DuZgaxNfbPswkpmMKHk5Jy18vkxjfPMj0=' 'sha256-Q+8W9SyZ6wnayM05rLv0YuHooUH/nnzpE2XQZJ/ekjY=' 'sha256-1lOrojGb+aoV56bZpsODLpb+j+HHbONNEpX/YqVtiUU=' 'sha256-sAsQphoZozaLVFpcda3bvT5euqcGL4MqVnizAR+Xla4=' 'sha256-ZlqdbaXB1F4Evuv/nmY3QGBLFBbrfiNndyYxbgdQn7g=' 'sha256-OEwIbDcQTxJYhU2ONmKA0LutIDdkmge2c+9IPFv5vFE=' 'sha256-Iz9ZZz/rHQFiJs2bKOHSC82gR0WdD/37qrPCB65PCFg='; font-src 'self' themes.googleusercontent.com *.gstatic.com https://fonts.gstatic.com storage.googleapis.com fonts.googleapis.com *.cdn.ampproject.org; img-src * data: blob:; require-trusted-types-for 'script'; object-src 'none'; connect-src 'self' cdn.ampproject.org *.google.com storage.googleapis.com https://services.google.com/fb/submissions/thekeywordtest/ https://services.google.com/fb/submissions/0a65d7733e1f11ea9701614fc033d30c/ *.gstatic.com gstatic.com *.cdn.ampproject.org *.doubleclick.net https://readaloud.googleapis.com/ *.google-analytics.com https://www.youtube.com/; style-src 'self' 'unsafe-inline' fonts.googleapis.com *.gstatic.com storage.googleapis.com *.google.com cdn.ampproject.org gstatic.com; frame-src 'self' www.google.com *.youtube.com youtube.com accounts.google.com *.doubleclick.net apis.google.com optimize.google.com *.google.com *.withgoogle.com *.cdn.ampproject.org https://www.gstatic.com/ https://www.youtube-nocookie.com/; media-src 'self' data: *.gstatic.com storage.googleapis.com *.googlevideo.com; base-uri 'none' — <em>Contains dangerous value: '*'</em></li></ul></div></div>
+            <div class="finding-card">
+                <div class="finding-header">
+                    <span class="finding-url">https://admin.google.com</span>
+                    <span class="grade" style="background:#e74c3c">F (14/100)</span>
+                </div><div class='finding-section'><h4>Missing Security Headers</h4><ul>
+                    <li>
+                        <span class="severity-badge" style="background:#e74c3c">High</span>
+                        <strong>Strict-Transport-Security</strong> — Enforces HTTPS — prevents SSL stripping attacks<br>
+                        <code>Recommendation: Strict-Transport-Security: max-age=31536000; includeSubDomains; preload</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#e74c3c">High</span>
+                        <strong>Content-Security-Policy</strong> — Controls which resources can load — prevents XSS<br>
+                        <code>Recommendation: Content-Security-Policy: default-src 'self'; script-src 'self'</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#e67e22">Medium</span>
+                        <strong>X-Frame-Options</strong> — Prevents clickjacking via iframe embedding<br>
+                        <code>Recommendation: X-Frame-Options: DENY</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#e67e22">Medium</span>
+                        <strong>X-Content-Type-Options</strong> — Prevents MIME sniffing — stops browser from guessing content type<br>
+                        <code>Recommendation: X-Content-Type-Options: nosniff</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#3498db">Low</span>
+                        <strong>Referrer-Policy</strong> — Controls how much referrer info is sent to other sites<br>
+                        <code>Recommendation: Referrer-Policy: strict-origin-when-cross-origin</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#3498db">Low</span>
+                        <strong>Permissions-Policy</strong> — Controls browser feature access (camera, microphone, geolocation)<br>
+                        <code>Recommendation: Permissions-Policy: geolocation=(), microphone=(), camera=()</code>
+                    </li></ul></div><div class='finding-section'><h4>Tech Stack Leakage</h4><ul><li><strong>Server:</strong> scaffolding on HTTPServer2 <em>— Reveals technology stack — aids attacker fingerprinting</em></li></ul></div><div class='finding-section'><h4>Weak Header Values</h4><ul><li><strong>X-XSS-Protection:</strong> 0 — <em>Contains dangerous value: '0'</em></li></ul></div></div>
+            <div class="finding-card">
+                <div class="finding-header">
+                    <span class="finding-url">https://www.google.com</span>
+                    <span class="grade" style="background:#e74c3c">F (29/100)</span>
+                </div><div class='finding-section'><h4>Missing Security Headers</h4><ul>
+                    <li>
+                        <span class="severity-badge" style="background:#e74c3c">High</span>
+                        <strong>Strict-Transport-Security</strong> — Enforces HTTPS — prevents SSL stripping attacks<br>
+                        <code>Recommendation: Strict-Transport-Security: max-age=31536000; includeSubDomains; preload</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#e74c3c">High</span>
+                        <strong>Content-Security-Policy</strong> — Controls which resources can load — prevents XSS<br>
+                        <code>Recommendation: Content-Security-Policy: default-src 'self'; script-src 'self'</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#e67e22">Medium</span>
+                        <strong>X-Content-Type-Options</strong> — Prevents MIME sniffing — stops browser from guessing content type<br>
+                        <code>Recommendation: X-Content-Type-Options: nosniff</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#3498db">Low</span>
+                        <strong>Referrer-Policy</strong> — Controls how much referrer info is sent to other sites<br>
+                        <code>Recommendation: Referrer-Policy: strict-origin-when-cross-origin</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#3498db">Low</span>
+                        <strong>Permissions-Policy</strong> — Controls browser feature access (camera, microphone, geolocation)<br>
+                        <code>Recommendation: Permissions-Policy: geolocation=(), microphone=(), camera=()</code>
+                    </li></ul></div><div class='finding-section'><h4>Tech Stack Leakage</h4><ul><li><strong>Server:</strong> gws <em>— Reveals technology stack — aids attacker fingerprinting</em></li></ul></div><div class='finding-section'><h4>Cookie Flag Issues</h4><ul><li>Missing 'HttpOnly' flag on Set-Cookie</li></ul></div><div class='finding-section'><h4>Weak Header Values</h4><ul><li><strong>X-XSS-Protection:</strong> 0 — <em>Contains dangerous value: '0'</em></li></ul></div></div>
+            <div class="finding-card">
+                <div class="finding-header">
+                    <span class="finding-url">https://shop.google.com</span>
+                    <span class="grade" style="background:#e67e22">D (43/100)</span>
+                </div><div class='finding-section'><h4>Missing Security Headers</h4><ul>
+                    <li>
+                        <span class="severity-badge" style="background:#e74c3c">High</span>
+                        <strong>Strict-Transport-Security</strong> — Enforces HTTPS — prevents SSL stripping attacks<br>
+                        <code>Recommendation: Strict-Transport-Security: max-age=31536000; includeSubDomains; preload</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#e67e22">Medium</span>
+                        <strong>X-Content-Type-Options</strong> — Prevents MIME sniffing — stops browser from guessing content type<br>
+                        <code>Recommendation: X-Content-Type-Options: nosniff</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#3498db">Low</span>
+                        <strong>Referrer-Policy</strong> — Controls how much referrer info is sent to other sites<br>
+                        <code>Recommendation: Referrer-Policy: strict-origin-when-cross-origin</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#3498db">Low</span>
+                        <strong>Permissions-Policy</strong> — Controls browser feature access (camera, microphone, geolocation)<br>
+                        <code>Recommendation: Permissions-Policy: geolocation=(), microphone=(), camera=()</code>
+                    </li></ul></div><div class='finding-section'><h4>Tech Stack Leakage</h4><ul><li><strong>Server:</strong> gws <em>— Reveals technology stack — aids attacker fingerprinting</em></li></ul></div><div class='finding-section'><h4>Cookie Flag Issues</h4><ul><li>Missing 'HttpOnly' flag on Set-Cookie</li></ul></div><div class='finding-section'><h4>Weak Header Values</h4><ul><li><strong>Content-Security-Policy:</strong> object-src 'none';base-uri 'self';script-src 'nonce-M6exb70NeHZ_OeMWIE4Wvg' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/xsrp — <em>Contains dangerous value: 'unsafe-inline'</em></li><li><strong>Content-Security-Policy:</strong> object-src 'none';base-uri 'self';script-src 'nonce-M6exb70NeHZ_OeMWIE4Wvg' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/xsrp — <em>Contains dangerous value: 'unsafe-eval'</em></li><li><strong>X-XSS-Protection:</strong> 0 — <em>Contains dangerous value: '0'</em></li></ul></div></div>
+            <div class="finding-card">
+                <div class="finding-header">
+                    <span class="finding-url">https://support.google.com</span>
+                    <span class="grade" style="background:#e67e22">D (57/100)</span>
+                </div><div class='finding-section'><h4>Missing Security Headers</h4><ul>
+                    <li>
+                        <span class="severity-badge" style="background:#e74c3c">High</span>
+                        <strong>Content-Security-Policy</strong> — Controls which resources can load — prevents XSS<br>
+                        <code>Recommendation: Content-Security-Policy: default-src 'self'; script-src 'self'</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#3498db">Low</span>
+                        <strong>Referrer-Policy</strong> — Controls how much referrer info is sent to other sites<br>
+                        <code>Recommendation: Referrer-Policy: strict-origin-when-cross-origin</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#3498db">Low</span>
+                        <strong>Permissions-Policy</strong> — Controls browser feature access (camera, microphone, geolocation)<br>
+                        <code>Recommendation: Permissions-Policy: geolocation=(), microphone=(), camera=()</code>
+                    </li></ul></div><div class='finding-section'><h4>Tech Stack Leakage</h4><ul><li><strong>Server:</strong> support-content-ui <em>— Reveals technology stack — aids attacker fingerprinting</em></li></ul></div><div class='finding-section'><h4>Cookie Flag Issues</h4><ul><li>Missing 'Secure' flag on Set-Cookie</li><li>Missing 'SameSite' flag on Set-Cookie</li></ul></div><div class='finding-section'><h4>Weak Header Values</h4><ul><li><strong>X-XSS-Protection:</strong> 0 — <em>Contains dangerous value: '0'</em></li></ul></div></div>
+            <div class="finding-card">
+                <div class="finding-header">
+                    <span class="finding-url">https://help.google.com</span>
+                    <span class="grade" style="background:#e67e22">D (57/100)</span>
+                </div><div class='finding-section'><h4>Missing Security Headers</h4><ul>
+                    <li>
+                        <span class="severity-badge" style="background:#e74c3c">High</span>
+                        <strong>Content-Security-Policy</strong> — Controls which resources can load — prevents XSS<br>
+                        <code>Recommendation: Content-Security-Policy: default-src 'self'; script-src 'self'</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#3498db">Low</span>
+                        <strong>Referrer-Policy</strong> — Controls how much referrer info is sent to other sites<br>
+                        <code>Recommendation: Referrer-Policy: strict-origin-when-cross-origin</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#3498db">Low</span>
+                        <strong>Permissions-Policy</strong> — Controls browser feature access (camera, microphone, geolocation)<br>
+                        <code>Recommendation: Permissions-Policy: geolocation=(), microphone=(), camera=()</code>
+                    </li></ul></div><div class='finding-section'><h4>Tech Stack Leakage</h4><ul><li><strong>Server:</strong> support-content-ui <em>— Reveals technology stack — aids attacker fingerprinting</em></li></ul></div><div class='finding-section'><h4>Cookie Flag Issues</h4><ul><li>Missing 'Secure' flag on Set-Cookie</li><li>Missing 'SameSite' flag on Set-Cookie</li></ul></div><div class='finding-section'><h4>Weak Header Values</h4><ul><li><strong>X-XSS-Protection:</strong> 0 — <em>Contains dangerous value: '0'</em></li></ul></div></div>
+            <div class="finding-card">
+                <div class="finding-header">
+                    <span class="finding-url">https://mobile.google.com</span>
+                    <span class="grade" style="background:#e67e22">D (57/100)</span>
+                </div><div class='finding-section'><h4>Missing Security Headers</h4><ul>
+                    <li>
+                        <span class="severity-badge" style="background:#e67e22">Medium</span>
+                        <strong>X-Frame-Options</strong> — Prevents clickjacking via iframe embedding<br>
+                        <code>Recommendation: X-Frame-Options: DENY</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#3498db">Low</span>
+                        <strong>Referrer-Policy</strong> — Controls how much referrer info is sent to other sites<br>
+                        <code>Recommendation: Referrer-Policy: strict-origin-when-cross-origin</code>
+                    </li>
+                    <li>
+                        <span class="severity-badge" style="background:#3498db">Low</span>
+                        <strong>Permissions-Policy</strong> — Controls browser feature access (camera, microphone, geolocation)<br>
+                        <code>Recommendation: Permissions-Policy: geolocation=(), microphone=(), camera=()</code>
+                    </li></ul></div><div class='finding-section'><h4>Tech Stack Leakage</h4><ul><li><strong>Server:</strong> sffe <em>— Reveals technology stack — aids attacker fingerprinting</em></li></ul></div><div class='finding-section'><h4>Weak Header Values</h4><ul><li><strong>Content-Security-Policy:</strong> script-src 'nonce-y4lRSFlbS89T1AlMk3inRw' 'report-sample' 'strict-dynamic' 'unsafe-eval' 'unsafe-inline' http: https:; object-src 'none'; report-uri https://csp.withgoogle.com/csp/uxe-owners-acl/about_google; base-uri 'none' — <em>Contains dangerous value: 'unsafe-inline'</em></li><li><strong>Content-Security-Policy:</strong> script-src 'nonce-y4lRSFlbS89T1AlMk3inRw' 'report-sample' 'strict-dynamic' 'unsafe-eval' 'unsafe-inline' http: https:; object-src 'none'; report-uri https://csp.withgoogle.com/csp/uxe-owners-acl/about_google; base-uri 'none' — <em>Contains dangerous value: 'unsafe-eval'</em></li><li><strong>X-XSS-Protection:</strong> 0 — <em>Contains dangerous value: '0'</em></li></ul></div></div>
+            <div class="finding-card">
+                <div class="finding-header">
+                    <span class="finding-url">https://store.google.com</span>
+                    <span class="grade" style="background:#2ecc71">B (86/100)</span>
+                </div><div class='finding-section'><h4>Missing Security Headers</h4><ul>
+                    <li>
+                        <span class="severity-badge" style="background:#3498db">Low</span>
+                        <strong>Referrer-Policy</strong> — Controls how much referrer info is sent to other sites<br>
+                        <code>Recommendation: Referrer-Policy: strict-origin-when-cross-origin</code>
+                    </li></ul></div><div class='finding-section'><h4>Tech Stack Leakage</h4><ul><li><strong>Server:</strong> ESF <em>— Reveals technology stack — aids attacker fingerprinting</em></li></ul></div><div class='finding-section'><h4>Cookie Flag Issues</h4><ul><li>Missing 'Secure' flag on Set-Cookie</li><li>Missing 'SameSite' flag on Set-Cookie</li></ul></div><div class='finding-section'><h4>Weak Header Values</h4><ul><li><strong>Content-Security-Policy:</strong> script-src 'report-sample' 'nonce-JgsMp9nv74bwauFQ0WJtDQ' 'unsafe-inline' 'unsafe-eval' 'strict-dynamic' https: http:;object-src 'none';base-uri 'self';report-uri /_/Gstore/cspreport;worker-src blob: — <em>Contains dangerous value: 'unsafe-inline'</em></li><li><strong>Content-Security-Policy:</strong> script-src 'report-sample' 'nonce-JgsMp9nv74bwauFQ0WJtDQ' 'unsafe-inline' 'unsafe-eval' 'strict-dynamic' https: http:;object-src 'none';base-uri 'self';report-uri /_/Gstore/cspreport;worker-src blob: — <em>Contains dangerous value: 'unsafe-eval'</em></li><li><strong>X-XSS-Protection:</strong> 0 — <em>Contains dangerous value: '0'</em></li></ul></div></div>
+            <div class="finding-card">
+                <div class="finding-header">
+                    <span class="finding-url">https://docs.google.com</span>
+                    <span class="grade" style="background:#2ecc71">B (86/100)</span>
+                </div><div class='finding-section'><h4>Missing Security Headers</h4><ul>
+                    <li>
+                        <span class="severity-badge" style="background:#3498db">Low</span>
+                        <strong>Referrer-Policy</strong> — Controls how much referrer info is sent to other sites<br>
+                        <code>Recommendation: Referrer-Policy: strict-origin-when-cross-origin</code>
+                    </li></ul></div><div class='finding-section'><h4>Tech Stack Leakage</h4><ul><li><strong>Server:</strong> ESF <em>— Reveals technology stack — aids attacker fingerprinting</em></li></ul></div><div class='finding-section'><h4>Cookie Flag Issues</h4><ul><li>Missing 'SameSite' flag on Set-Cookie</li></ul></div><div class='finding-section'><h4>Weak Header Values</h4><ul><li><strong>X-XSS-Protection:</strong> 0 — <em>Contains dangerous value: '0'</em></li></ul></div></div>
+            <div class="finding-card">
+                <div class="finding-header">
+                    <span class="finding-url">https://mail.google.com</span>
+                    <span class="grade" style="background:#2ecc71">B (86/100)</span>
+                </div><div class='finding-section'><h4>Missing Security Headers</h4><ul>
+                    <li>
+                        <span class="severity-badge" style="background:#3498db">Low</span>
+                        <strong>Referrer-Policy</strong> — Controls how much referrer info is sent to other sites<br>
+                        <code>Recommendation: Referrer-Policy: strict-origin-when-cross-origin</code>
+                    </li></ul></div><div class='finding-section'><h4>Tech Stack Leakage</h4><ul><li><strong>Server:</strong> ESF <em>— Reveals technology stack — aids attacker fingerprinting</em></li></ul></div><div class='finding-section'><h4>Cookie Flag Issues</h4><ul><li>Missing 'SameSite' flag on Set-Cookie</li></ul></div><div class='finding-section'><h4>Weak Header Values</h4><ul><li><strong>X-XSS-Protection:</strong> 0 — <em>Contains dangerous value: '0'</em></li></ul></div></div>
+
+  <h2>Screenshots</h2>
+  <p class='muted'>No screenshots captured (gowitness not installed or skipped)</p>
+
+</div>
+<div class="footer">Generated by DarkRecon v1.0 &nbsp;|&nbsp; github.com/yourname/recon-tool</div>
+</body>
+</html>

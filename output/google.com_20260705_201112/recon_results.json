@@ -1,0 +1,1225 @@
+{
+  "target": "google.com",
+  "timestamp": "20260705_201112",
+  "out_dir": "output/google.com_20260705_201112",
+  "subdomains": [
+    "admin.google.com",
+    "api.google.com",
+    "blog.google.com",
+    "corp.google.com",
+    "docs.google.com",
+    "download.google.com",
+    "help.google.com",
+    "mail.google.com",
+    "mobile.google.com",
+    "ns1.google.com",
+    "ns2.google.com",
+    "sandbox.google.com",
+    "shop.google.com",
+    "smtp.google.com",
+    "store.google.com",
+    "support.google.com",
+    "upload.google.com",
+    "vpn.google.com",
+    "www.google.com"
+  ],
+  "live_hosts": [
+    "https://download.google.com",
+    "https://api.google.com",
+    "https://corp.google.com",
+    "https://sandbox.google.com",
+    "https://blog.google.com",
+    "https://mobile.google.com",
+    "https://docs.google.com",
+    "https://upload.google.com",
+    "https://admin.google.com",
+    "https://shop.google.com",
+    "https://mail.google.com",
+    "https://help.google.com",
+    "https://www.google.com",
+    "https://support.google.com",
+    "https://store.google.com"
+  ],
+  "header_results": [
+    {
+      "url": "https://upload.google.com",
+      "status": 404,
+      "score": 14,
+      "grade": "F",
+      "missing_headers": [
+        {
+          "header": "Strict-Transport-Security",
+          "description": "Enforces HTTPS \u2014 prevents SSL stripping attacks",
+          "severity": "High",
+          "recommendation": "Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
+        },
+        {
+          "header": "Content-Security-Policy",
+          "description": "Controls which resources can load \u2014 prevents XSS",
+          "severity": "High",
+          "recommendation": "Content-Security-Policy: default-src 'self'; script-src 'self'"
+        },
+        {
+          "header": "X-Frame-Options",
+          "description": "Prevents clickjacking via iframe embedding",
+          "severity": "Medium",
+          "recommendation": "X-Frame-Options: DENY"
+        },
+        {
+          "header": "X-Content-Type-Options",
+          "description": "Prevents MIME sniffing \u2014 stops browser from guessing content type",
+          "severity": "Medium",
+          "recommendation": "X-Content-Type-Options: nosniff"
+        },
+        {
+          "header": "Permissions-Policy",
+          "description": "Controls browser feature access (camera, microphone, geolocation)",
+          "severity": "Low",
+          "recommendation": "Permissions-Policy: geolocation=(), microphone=(), camera=()"
+        },
+        {
+          "header": "X-XSS-Protection",
+          "description": "Legacy XSS filter for older browsers",
+          "severity": "Info",
+          "recommendation": "X-XSS-Protection: 1; mode=block"
+        }
+      ],
+      "present_headers": [
+        {
+          "header": "Referrer-Policy",
+          "value": "no-referrer"
+        }
+      ],
+      "weak_headers": [],
+      "leaky_headers": [],
+      "cookie_issues": [],
+      "raw_headers": {
+        "Content-Type": "text/html; charset=UTF-8",
+        "Referrer-Policy": "no-referrer",
+        "Content-Length": "1561",
+        "Date": "Sun, 05 Jul 2026 14:43:41 GMT",
+        "Alt-Svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "Connection": "close"
+      }
+    },
+    {
+      "url": "https://sandbox.google.com",
+      "status": 404,
+      "score": 14,
+      "grade": "F",
+      "missing_headers": [
+        {
+          "header": "Strict-Transport-Security",
+          "description": "Enforces HTTPS \u2014 prevents SSL stripping attacks",
+          "severity": "High",
+          "recommendation": "Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
+        },
+        {
+          "header": "Content-Security-Policy",
+          "description": "Controls which resources can load \u2014 prevents XSS",
+          "severity": "High",
+          "recommendation": "Content-Security-Policy: default-src 'self'; script-src 'self'"
+        },
+        {
+          "header": "X-Frame-Options",
+          "description": "Prevents clickjacking via iframe embedding",
+          "severity": "Medium",
+          "recommendation": "X-Frame-Options: DENY"
+        },
+        {
+          "header": "X-Content-Type-Options",
+          "description": "Prevents MIME sniffing \u2014 stops browser from guessing content type",
+          "severity": "Medium",
+          "recommendation": "X-Content-Type-Options: nosniff"
+        },
+        {
+          "header": "Permissions-Policy",
+          "description": "Controls browser feature access (camera, microphone, geolocation)",
+          "severity": "Low",
+          "recommendation": "Permissions-Policy: geolocation=(), microphone=(), camera=()"
+        },
+        {
+          "header": "X-XSS-Protection",
+          "description": "Legacy XSS filter for older browsers",
+          "severity": "Info",
+          "recommendation": "X-XSS-Protection: 1; mode=block"
+        }
+      ],
+      "present_headers": [
+        {
+          "header": "Referrer-Policy",
+          "value": "no-referrer"
+        }
+      ],
+      "weak_headers": [],
+      "leaky_headers": [],
+      "cookie_issues": [],
+      "raw_headers": {
+        "Content-Type": "text/html; charset=UTF-8",
+        "Referrer-Policy": "no-referrer",
+        "Content-Length": "1561",
+        "Date": "Sun, 05 Jul 2026 14:43:41 GMT",
+        "Alt-Svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "Connection": "close"
+      }
+    },
+    {
+      "url": "https://download.google.com",
+      "status": 404,
+      "score": 14,
+      "grade": "F",
+      "missing_headers": [
+        {
+          "header": "Strict-Transport-Security",
+          "description": "Enforces HTTPS \u2014 prevents SSL stripping attacks",
+          "severity": "High",
+          "recommendation": "Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
+        },
+        {
+          "header": "Content-Security-Policy",
+          "description": "Controls which resources can load \u2014 prevents XSS",
+          "severity": "High",
+          "recommendation": "Content-Security-Policy: default-src 'self'; script-src 'self'"
+        },
+        {
+          "header": "X-Frame-Options",
+          "description": "Prevents clickjacking via iframe embedding",
+          "severity": "Medium",
+          "recommendation": "X-Frame-Options: DENY"
+        },
+        {
+          "header": "X-Content-Type-Options",
+          "description": "Prevents MIME sniffing \u2014 stops browser from guessing content type",
+          "severity": "Medium",
+          "recommendation": "X-Content-Type-Options: nosniff"
+        },
+        {
+          "header": "Permissions-Policy",
+          "description": "Controls browser feature access (camera, microphone, geolocation)",
+          "severity": "Low",
+          "recommendation": "Permissions-Policy: geolocation=(), microphone=(), camera=()"
+        },
+        {
+          "header": "X-XSS-Protection",
+          "description": "Legacy XSS filter for older browsers",
+          "severity": "Info",
+          "recommendation": "X-XSS-Protection: 1; mode=block"
+        }
+      ],
+      "present_headers": [
+        {
+          "header": "Referrer-Policy",
+          "value": "no-referrer"
+        }
+      ],
+      "weak_headers": [],
+      "leaky_headers": [],
+      "cookie_issues": [],
+      "raw_headers": {
+        "Content-Type": "text/html; charset=UTF-8",
+        "Referrer-Policy": "no-referrer",
+        "Content-Length": "1561",
+        "Date": "Sun, 05 Jul 2026 14:43:41 GMT",
+        "Alt-Svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "Connection": "close"
+      }
+    },
+    {
+      "url": "https://api.google.com",
+      "status": 404,
+      "score": 14,
+      "grade": "F",
+      "missing_headers": [
+        {
+          "header": "Strict-Transport-Security",
+          "description": "Enforces HTTPS \u2014 prevents SSL stripping attacks",
+          "severity": "High",
+          "recommendation": "Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
+        },
+        {
+          "header": "Content-Security-Policy",
+          "description": "Controls which resources can load \u2014 prevents XSS",
+          "severity": "High",
+          "recommendation": "Content-Security-Policy: default-src 'self'; script-src 'self'"
+        },
+        {
+          "header": "X-Frame-Options",
+          "description": "Prevents clickjacking via iframe embedding",
+          "severity": "Medium",
+          "recommendation": "X-Frame-Options: DENY"
+        },
+        {
+          "header": "X-Content-Type-Options",
+          "description": "Prevents MIME sniffing \u2014 stops browser from guessing content type",
+          "severity": "Medium",
+          "recommendation": "X-Content-Type-Options: nosniff"
+        },
+        {
+          "header": "Permissions-Policy",
+          "description": "Controls browser feature access (camera, microphone, geolocation)",
+          "severity": "Low",
+          "recommendation": "Permissions-Policy: geolocation=(), microphone=(), camera=()"
+        },
+        {
+          "header": "X-XSS-Protection",
+          "description": "Legacy XSS filter for older browsers",
+          "severity": "Info",
+          "recommendation": "X-XSS-Protection: 1; mode=block"
+        }
+      ],
+      "present_headers": [
+        {
+          "header": "Referrer-Policy",
+          "value": "no-referrer"
+        }
+      ],
+      "weak_headers": [],
+      "leaky_headers": [],
+      "cookie_issues": [],
+      "raw_headers": {
+        "Content-Type": "text/html; charset=UTF-8",
+        "Referrer-Policy": "no-referrer",
+        "Content-Length": "1561",
+        "Date": "Sun, 05 Jul 2026 14:43:41 GMT",
+        "Alt-Svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "Connection": "close"
+      }
+    },
+    {
+      "url": "https://corp.google.com",
+      "status": 400,
+      "score": 14,
+      "grade": "F",
+      "missing_headers": [
+        {
+          "header": "Strict-Transport-Security",
+          "description": "Enforces HTTPS \u2014 prevents SSL stripping attacks",
+          "severity": "High",
+          "recommendation": "Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
+        },
+        {
+          "header": "Content-Security-Policy",
+          "description": "Controls which resources can load \u2014 prevents XSS",
+          "severity": "High",
+          "recommendation": "Content-Security-Policy: default-src 'self'; script-src 'self'"
+        },
+        {
+          "header": "X-Frame-Options",
+          "description": "Prevents clickjacking via iframe embedding",
+          "severity": "Medium",
+          "recommendation": "X-Frame-Options: DENY"
+        },
+        {
+          "header": "X-Content-Type-Options",
+          "description": "Prevents MIME sniffing \u2014 stops browser from guessing content type",
+          "severity": "Medium",
+          "recommendation": "X-Content-Type-Options: nosniff"
+        },
+        {
+          "header": "Referrer-Policy",
+          "description": "Controls how much referrer info is sent to other sites",
+          "severity": "Low",
+          "recommendation": "Referrer-Policy: strict-origin-when-cross-origin"
+        },
+        {
+          "header": "X-XSS-Protection",
+          "description": "Legacy XSS filter for older browsers",
+          "severity": "Info",
+          "recommendation": "X-XSS-Protection: 1; mode=block"
+        }
+      ],
+      "present_headers": [
+        {
+          "header": "Permissions-Policy",
+          "value": "ch-ua=*, ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-mobile=*, ch-ua-model=*, ch-ua-platform=*, ch-ua-platform-version=*, ch-ua-wow64=*"
+        }
+      ],
+      "weak_headers": [],
+      "leaky_headers": [],
+      "cookie_issues": [],
+      "raw_headers": {
+        "Content-Type": "text/html; charset=UTF-8",
+        "Expires": "Mon, 01 Jan 1990 00:00:00 GMT",
+        "Pragma": "no-cache",
+        "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+        "X-UberProxy-Code": "4036",
+        "Content-Length": "14215",
+        "Accept-CH": "Sec-CH-UA, Sec-CH-UA-Arch, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version, Sec-CH-UA-WoW64",
+        "Permissions-Policy": "ch-ua=*, ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-mobile=*, ch-ua-model=*, ch-ua-platform=*, ch-ua-platform-version=*, ch-ua-wow64=*",
+        "Date": "Sun, 05 Jul 2026 14:43:41 GMT",
+        "Cross-Origin-Opener-Policy-Report-Only": "same-origin; report-to=\"gfe-l2-uberproxy\"",
+        "Report-To": "{\"group\":\"gfe-l2-uberproxy\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/l2-uberproxy\"}]}",
+        "Connection": "close"
+      }
+    },
+    {
+      "url": "https://www.google.com",
+      "status": 200,
+      "score": 29,
+      "grade": "F",
+      "missing_headers": [
+        {
+          "header": "Strict-Transport-Security",
+          "description": "Enforces HTTPS \u2014 prevents SSL stripping attacks",
+          "severity": "High",
+          "recommendation": "Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
+        },
+        {
+          "header": "Content-Security-Policy",
+          "description": "Controls which resources can load \u2014 prevents XSS",
+          "severity": "High",
+          "recommendation": "Content-Security-Policy: default-src 'self'; script-src 'self'"
+        },
+        {
+          "header": "X-Content-Type-Options",
+          "description": "Prevents MIME sniffing \u2014 stops browser from guessing content type",
+          "severity": "Medium",
+          "recommendation": "X-Content-Type-Options: nosniff"
+        },
+        {
+          "header": "Referrer-Policy",
+          "description": "Controls how much referrer info is sent to other sites",
+          "severity": "Low",
+          "recommendation": "Referrer-Policy: strict-origin-when-cross-origin"
+        },
+        {
+          "header": "Permissions-Policy",
+          "description": "Controls browser feature access (camera, microphone, geolocation)",
+          "severity": "Low",
+          "recommendation": "Permissions-Policy: geolocation=(), microphone=(), camera=()"
+        }
+      ],
+      "present_headers": [
+        {
+          "header": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "header": "X-XSS-Protection",
+          "value": "0"
+        }
+      ],
+      "weak_headers": [
+        {
+          "header": "X-XSS-Protection",
+          "value": "0",
+          "issue": "Contains dangerous value: '0'",
+          "severity": "Info"
+        }
+      ],
+      "leaky_headers": [
+        {
+          "header": "Server",
+          "value": "gws",
+          "issue": "Reveals technology stack \u2014 aids attacker fingerprinting"
+        }
+      ],
+      "cookie_issues": [
+        "Missing 'HttpOnly' flag on Set-Cookie"
+      ],
+      "raw_headers": {
+        "Content-Type": "text/html; charset=UTF-8",
+        "Date": "Sun, 05 Jul 2026 14:43:41 GMT",
+        "Expires": "-1",
+        "Cache-Control": "private, max-age=0",
+        "Content-Security-Policy-Report-Only": "object-src 'none';base-uri 'self';script-src 'nonce-4Gk5iyxnYr5NUG3io4HaWA' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp",
+        "Accept-CH": "Sec-CH-Prefers-Color-Scheme",
+        "P3P": "CP=\"This is not a P3P policy! See g.co/p3phelp for more info.\"",
+        "Server": "gws",
+        "X-XSS-Protection": "0",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Set-Cookie": "__Secure-STRP=ANmZwa3aHxp3CNwdPaY3HwupzaeZeZW-91vDq1XfYMvGzAW0YHq4XQ7KknUzCBNo7ZrjxZ-FU5gWvDux2V82NMdTLUSeU0pOiDBl; expires=Sun, 05-Jul-2026 14:48:41 GMT; path=/; domain=.google.com; Secure; SameSite=strict",
+        "Alt-Svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "Accept-Ranges": "none",
+        "Vary": "Accept-Encoding",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      }
+    },
+    {
+      "url": "https://shop.google.com",
+      "status": 200,
+      "score": 43,
+      "grade": "D",
+      "missing_headers": [
+        {
+          "header": "Strict-Transport-Security",
+          "description": "Enforces HTTPS \u2014 prevents SSL stripping attacks",
+          "severity": "High",
+          "recommendation": "Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
+        },
+        {
+          "header": "X-Content-Type-Options",
+          "description": "Prevents MIME sniffing \u2014 stops browser from guessing content type",
+          "severity": "Medium",
+          "recommendation": "X-Content-Type-Options: nosniff"
+        },
+        {
+          "header": "Referrer-Policy",
+          "description": "Controls how much referrer info is sent to other sites",
+          "severity": "Low",
+          "recommendation": "Referrer-Policy: strict-origin-when-cross-origin"
+        },
+        {
+          "header": "Permissions-Policy",
+          "description": "Controls browser feature access (camera, microphone, geolocation)",
+          "severity": "Low",
+          "recommendation": "Permissions-Policy: geolocation=(), microphone=(), camera=()"
+        }
+      ],
+      "present_headers": [
+        {
+          "header": "Content-Security-Policy",
+          "value": "object-src 'none';base-uri 'self';script-src 'nonce-XX_3Bt68rT8mtpkbQFLRqw' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/xsrp"
+        },
+        {
+          "header": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "header": "X-XSS-Protection",
+          "value": "0"
+        }
+      ],
+      "weak_headers": [
+        {
+          "header": "Content-Security-Policy",
+          "value": "object-src 'none';base-uri 'self';script-src 'nonce-XX_3Bt68rT8mtpkbQFLRqw' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/xsrp",
+          "issue": "Contains dangerous value: 'unsafe-inline'",
+          "severity": "High"
+        },
+        {
+          "header": "Content-Security-Policy",
+          "value": "object-src 'none';base-uri 'self';script-src 'nonce-XX_3Bt68rT8mtpkbQFLRqw' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/xsrp",
+          "issue": "Contains dangerous value: 'unsafe-eval'",
+          "severity": "High"
+        },
+        {
+          "header": "X-XSS-Protection",
+          "value": "0",
+          "issue": "Contains dangerous value: '0'",
+          "severity": "Info"
+        }
+      ],
+      "leaky_headers": [
+        {
+          "header": "Server",
+          "value": "gws",
+          "issue": "Reveals technology stack \u2014 aids attacker fingerprinting"
+        }
+      ],
+      "cookie_issues": [
+        "Missing 'HttpOnly' flag on Set-Cookie"
+      ],
+      "raw_headers": {
+        "Content-Type": "text/html; charset=UTF-8",
+        "Date": "Sun, 05 Jul 2026 14:43:41 GMT",
+        "Expires": "-1",
+        "Cache-Control": "private, max-age=0",
+        "Content-Security-Policy": "object-src 'none';base-uri 'self';script-src 'nonce-XX_3Bt68rT8mtpkbQFLRqw' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/xsrp",
+        "Accept-CH": "Sec-CH-Prefers-Color-Scheme",
+        "P3P": "CP=\"This is not a P3P policy! See g.co/p3phelp for more info.\"",
+        "Server": "gws",
+        "X-XSS-Protection": "0",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Set-Cookie": "__Secure-STRP=ANmZwa3XPzLxSv6_j6G1L0iUWaXDkFp0CeRwehzMRzxIG-VG7AI0zebYNEH-FQNcmJQ-4n606M8BTGE6oxehhd1ILyAO7V-zZwCd; expires=Sun, 05-Jul-2026 14:48:41 GMT; path=/; domain=.google.com; Secure; SameSite=strict",
+        "Alt-Svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "Accept-Ranges": "none",
+        "Vary": "Accept-Encoding",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      }
+    },
+    {
+      "url": "https://mobile.google.com",
+      "status": 200,
+      "score": 57,
+      "grade": "D",
+      "missing_headers": [
+        {
+          "header": "X-Frame-Options",
+          "description": "Prevents clickjacking via iframe embedding",
+          "severity": "Medium",
+          "recommendation": "X-Frame-Options: DENY"
+        },
+        {
+          "header": "Referrer-Policy",
+          "description": "Controls how much referrer info is sent to other sites",
+          "severity": "Low",
+          "recommendation": "Referrer-Policy: strict-origin-when-cross-origin"
+        },
+        {
+          "header": "Permissions-Policy",
+          "description": "Controls browser feature access (camera, microphone, geolocation)",
+          "severity": "Low",
+          "recommendation": "Permissions-Policy: geolocation=(), microphone=(), camera=()"
+        }
+      ],
+      "present_headers": [
+        {
+          "header": "Strict-Transport-Security",
+          "value": "max-age=31536000"
+        },
+        {
+          "header": "Content-Security-Policy",
+          "value": "script-src 'nonce--kO1Ii6ggsywFEm8h-MieQ' 'report-sample' 'strict-dynamic' 'unsafe-eval' 'unsafe-inline' http: https:; object-src 'none'; report-uri https://csp.withgoogle.com/csp/uxe-owners-acl/about_google; base-uri 'none'"
+        },
+        {
+          "header": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "header": "X-XSS-Protection",
+          "value": "0"
+        }
+      ],
+      "weak_headers": [
+        {
+          "header": "Content-Security-Policy",
+          "value": "script-src 'nonce--kO1Ii6ggsywFEm8h-MieQ' 'report-sample' 'strict-dynamic' 'unsafe-eval' 'unsafe-inline' http: https:; object-src 'none'; report-uri https://csp.withgoogle.com/csp/uxe-owners-acl/about_google; base-uri 'none'",
+          "issue": "Contains dangerous value: 'unsafe-inline'",
+          "severity": "High"
+        },
+        {
+          "header": "Content-Security-Policy",
+          "value": "script-src 'nonce--kO1Ii6ggsywFEm8h-MieQ' 'report-sample' 'strict-dynamic' 'unsafe-eval' 'unsafe-inline' http: https:; object-src 'none'; report-uri https://csp.withgoogle.com/csp/uxe-owners-acl/about_google; base-uri 'none'",
+          "issue": "Contains dangerous value: 'unsafe-eval'",
+          "severity": "High"
+        },
+        {
+          "header": "X-XSS-Protection",
+          "value": "0",
+          "issue": "Contains dangerous value: '0'",
+          "severity": "Info"
+        }
+      ],
+      "leaky_headers": [
+        {
+          "header": "Server",
+          "value": "sffe",
+          "issue": "Reveals technology stack \u2014 aids attacker fingerprinting"
+        }
+      ],
+      "cookie_issues": [],
+      "raw_headers": {
+        "Accept-Ranges": "bytes",
+        "Vary": "Accept-Encoding",
+        "Content-Type": "text/html",
+        "Content-Security-Policy": "script-src 'nonce--kO1Ii6ggsywFEm8h-MieQ' 'report-sample' 'strict-dynamic' 'unsafe-eval' 'unsafe-inline' http: https:; object-src 'none'; report-uri https://csp.withgoogle.com/csp/uxe-owners-acl/about_google; base-uri 'none'",
+        "Content-Security-Policy-Report-Only": "require-trusted-types-for 'script'; report-uri https://csp.withgoogle.com/csp/uxe-owners-acl/about_google",
+        "Cross-Origin-Resource-Policy": "cross-origin",
+        "Cross-Origin-Opener-Policy-Report-Only": "same-origin; report-to=\"uxe-owners-acl/about_google\"",
+        "Report-To": "{\"group\":\"uxe-owners-acl/about_google\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/uxe-owners-acl/about_google\"}]}",
+        "Content-Length": "684368",
+        "Date": "Sun, 05 Jul 2026 14:43:42 GMT",
+        "Pragma": "no-cache",
+        "Expires": "Fri, 01 Jan 1990 00:00:00 GMT",
+        "Cache-Control": "no-cache, must-revalidate",
+        "Strict-Transport-Security": "max-age=31536000",
+        "X-Content-Type-Options": "nosniff",
+        "Server": "sffe",
+        "X-XSS-Protection": "0",
+        "Alt-Svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "Connection": "close"
+      }
+    },
+    {
+      "url": "https://store.google.com",
+      "status": 200,
+      "score": 86,
+      "grade": "B",
+      "missing_headers": [
+        {
+          "header": "Referrer-Policy",
+          "description": "Controls how much referrer info is sent to other sites",
+          "severity": "Low",
+          "recommendation": "Referrer-Policy: strict-origin-when-cross-origin"
+        }
+      ],
+      "present_headers": [
+        {
+          "header": "Strict-Transport-Security",
+          "value": "max-age=31536000"
+        },
+        {
+          "header": "Content-Security-Policy",
+          "value": "script-src 'report-sample' 'nonce-TFan1T1HFJbEtv6I4k9sfQ' 'unsafe-inline' 'unsafe-eval' 'strict-dynamic' https: http:;object-src 'none';base-uri 'self';report-uri /_/Gstore/cspreport;worker-src blob:"
+        },
+        {
+          "header": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "header": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "header": "Permissions-Policy",
+          "value": "ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factors=*, ch-ua-platform=*, ch-ua-platform-version=*"
+        },
+        {
+          "header": "X-XSS-Protection",
+          "value": "0"
+        }
+      ],
+      "weak_headers": [
+        {
+          "header": "Content-Security-Policy",
+          "value": "script-src 'report-sample' 'nonce-TFan1T1HFJbEtv6I4k9sfQ' 'unsafe-inline' 'unsafe-eval' 'strict-dynamic' https: http:;object-src 'none';base-uri 'self';report-uri /_/Gstore/cspreport;worker-src blob:",
+          "issue": "Contains dangerous value: 'unsafe-inline'",
+          "severity": "High"
+        },
+        {
+          "header": "Content-Security-Policy",
+          "value": "script-src 'report-sample' 'nonce-TFan1T1HFJbEtv6I4k9sfQ' 'unsafe-inline' 'unsafe-eval' 'strict-dynamic' https: http:;object-src 'none';base-uri 'self';report-uri /_/Gstore/cspreport;worker-src blob:",
+          "issue": "Contains dangerous value: 'unsafe-eval'",
+          "severity": "High"
+        },
+        {
+          "header": "X-XSS-Protection",
+          "value": "0",
+          "issue": "Contains dangerous value: '0'",
+          "severity": "Info"
+        }
+      ],
+      "leaky_headers": [
+        {
+          "header": "Server",
+          "value": "ESF",
+          "issue": "Reveals technology stack \u2014 aids attacker fingerprinting"
+        }
+      ],
+      "cookie_issues": [
+        "Missing 'Secure' flag on Set-Cookie",
+        "Missing 'SameSite' flag on Set-Cookie"
+      ],
+      "raw_headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "x-ua-compatible": "IE=edge",
+        "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+        "Pragma": "no-cache",
+        "Expires": "Mon, 01 Jan 1990 00:00:00 GMT",
+        "Date": "Sun, 05 Jul 2026 14:43:42 GMT",
+        "P3P": "CP=\"This is not a P3P policy! See g.co/p3phelp for more info.\"",
+        "Strict-Transport-Security": "max-age=31536000",
+        "Content-Security-Policy-Report-Only": "require-trusted-types-for 'script';report-uri /_/Gstore/cspreport",
+        "Content-Security-Policy": "script-src 'report-sample' 'nonce-TFan1T1HFJbEtv6I4k9sfQ' 'unsafe-inline' 'unsafe-eval' 'strict-dynamic' https: http:;object-src 'none';base-uri 'self';report-uri /_/Gstore/cspreport;worker-src blob:",
+        "Accept-CH": "Sec-CH-UA-Arch, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Model, Sec-CH-UA-WoW64, Sec-CH-UA-Form-Factors, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version",
+        "Cross-Origin-Resource-Policy": "same-site",
+        "Cross-Origin-Opener-Policy": "unsafe-none",
+        "Permissions-Policy": "ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factors=*, ch-ua-platform=*, ch-ua-platform-version=*",
+        "reporting-endpoints": "default=\"/_/Gstore/web-reports?context=eJwVzGlU1IcZxWF84_uqNG2AGGUJithQNC6AKIpaam1EgRmYGZYGIxQJLuSURSCAVkGjYGysVtSBxGhiaIuURJqiATTGpEHjEZmF9T8DUpgZGKxgDUqrjcdePzzndz9d16Nu8129XWIDvV1c7ulcPDL1k5aommjFgSZq8G-mqqxmmprfTCmfNdOMlmbyhLCbzfT4bjOVxl6iffDBrktU8pdLZAlXaPZGhb7MU6jxsEJzjyt05n2FPoZPoOZrhb75TqFyk0KZZoVGbyt0fFShH5GF9odYKHCNhebD-6kWOgW38i1UV2Chwm8sdH_cQiGuVgqF_d5W6t5mJZ9qKw2cs9JHNivdHLPSB5N66fbkXjo5pZdyvHrpqyW91HVykM43DNK15kFarAySYh-ksieDlOxlo6Y4G82Ot9GmBBt9ttlGf9xiI5e9Ngo6YKMHX9jI3GKjjO9s9Ha_jQqhYdhGmns2evLYRu5PbXSb7JTBduqfYqfG6XYqX2Cn0IV2qgq2U3WcnYzb7XQ9z05ttdj1dgrot1PnEgf9PsxB5zc46BdFDtKfcNCBKgftbHZQrtFB5WMOOgjZU4aorGCIWruG6EPLED1KGqZ3zcMU_-9henWGk_70spP-PMdJpsNOmviDk1aNOalizghVwbXQEWqFleoRioCKN0boHxC9bYQ0kAJvQnLDCHldHqEJzzv0FFZ53aF0-Feknsfh3Ho9L9ig5_JYPR-G4CY9hz1zRc-roXRQz2Uw_6GeQ-DK9Eq-BrqfVfJGaDlfybfggNLGFXBhvI2_hP4nbTwMdycZ-AE43A08CgGeBl4E4S8beC0Y0w3cAxYYBEOxgbvh8z0Gbob3Sgx8AvLPGngfHIJKuPOJgb-H4lYD53Ya2NNhYD9YMG7g0PFn30aOho4gI_dCS5qRb0HXe0a-DfvOG3k_eNwxsg9M-5-R3eG3_iYugHqtiRvBedbE92HHBRPvhBKnicsh2M_MEfBGmJnfhG1rzJwDbolm9gSl3MwD4HvSzK9AjWLmelB-2c4DUJLdzuVQUNnOu2FmTTsXgcbSzq_DDs8OLoWzyR1cC5vSOjgDpLuDfwKWeZ08CC7bO3kqrH2rk6PhtVldrAJfYxe_ApMTu_l5OF7czacg61g3F0LqiW7eCtV13VwHpxu7-QzM8u7hAIhZ3MMJzyzv4U2QE97DV-EGRK7s4e939rDbrh4u-HsP74bIH3o4FoKGFV4Ojx8o_NxDhctWW7gcGnysfBkCjlh5MaQ9sXImRLzUy5HwxZVe_gpMpX2swEuH-tgXLtf28bewrqGP1RBxvY_XQ9Z_-_htGHA-5RE40rlB9JA8LUo2g_eMKPGHd5KixPfXUeKTHiVzobUpSjpgYWeULIUUVbRsgSlx0fIC1GRGSz1s3B0t6ZD0n2hJhTGYgHlzYiQElsXEyM_h-O9i5EM4eDRGjoLL1RiZCkXfxsheaIFbkL1cJYWQE66SIliXpRI1TOSpZHK-SnyOqWQuXL-oEgPwqEp-DIdc1VIBwTPVsgJmeaolAIpeVUspTCtTizu4_k0tHhANOljaoJbVEAGR0OtUix2GYAxc98XKizB5NFYyf4iVHfBCeJzMhNd_EydpkFkRJ3nw8cU4qYWdN-PkXRjui5N7sOJpnKyBTNHIc9M14vdTjQRCzQKN1EN1qEbqwHu9RvxhabxG1sKcBI0EJWpkObSla6T9U41YQXNRI8mQfkMjb0G9VSONYPLXigLJGq1sBivYYU2RVtLg0yqtXIC2M1rpgpnXtDIb9hi0Ug6jJq08hFV2rfwKEoe1kgJD41oZg_sv6uQR5HrppBhu-uukHRrm6WRduE7UELZSJxHg95pOAuFGlE7MULtdJ5_D3YM6eQDDx3RyD5pO6-RrKPyrTkpg9KpOHoKne7z4Qd6meNkF2yvjJReK6-JlL5yCanAdiBcPWDQvQZbBonIU7h9JkEcw8FGCjMCe1gQpg-62BOkHzdxESYaizkQphRS3JNkCuq1JshH8qpMkEDyen3raes4sbkf_WTYxyd93c3Zu6ta8_OwdGQuzMrJTQ4JClgUtWxK0KGhpak7w_wElMFkL\"",
+        "Server": "ESF",
+        "X-XSS-Protection": "0",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Content-Type-Options": "nosniff",
+        "Set-Cookie": "NID=532=YH-yAHALyeUgExKLPbY9qpZsCr_WHt_Nn5MxvP5OYhN7xbvx2nNDuo4mQRCEX7bkHUIdca58QsFHWsGK_wm2MP7mePDKJGevK5KcBwHd7gx8tabP3iL-jLg2IcnAp5Qcla5-D9dFdDIDn58EHeNCB03cfKmjAfnEGQUUvaFVKvgldxBvd7RtGvV5-0rAutddDTIQ7g; expires=Mon, 04-Jan-2027 14:43:42 GMT; path=/; domain=.google.com; HttpOnly",
+        "Alt-Svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "Accept-Ranges": "none",
+        "Vary": "Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site,Accept-Encoding",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      }
+    },
+    {
+      "url": "https://docs.google.com",
+      "status": 200,
+      "score": 86,
+      "grade": "B",
+      "missing_headers": [
+        {
+          "header": "Referrer-Policy",
+          "description": "Controls how much referrer info is sent to other sites",
+          "severity": "Low",
+          "recommendation": "Referrer-Policy: strict-origin-when-cross-origin"
+        }
+      ],
+      "present_headers": [
+        {
+          "header": "Strict-Transport-Security",
+          "value": "max-age=31536000; includeSubDomains"
+        },
+        {
+          "header": "Content-Security-Policy",
+          "value": "require-trusted-types-for 'script';report-uri /v3/signin/_/AccountsSignInUi/cspreport"
+        },
+        {
+          "header": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "header": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "header": "Permissions-Policy",
+          "value": "ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factors=*, ch-ua-platform=*, ch-ua-platform-version=*"
+        },
+        {
+          "header": "X-XSS-Protection",
+          "value": "0"
+        }
+      ],
+      "weak_headers": [
+        {
+          "header": "X-XSS-Protection",
+          "value": "0",
+          "issue": "Contains dangerous value: '0'",
+          "severity": "Info"
+        }
+      ],
+      "leaky_headers": [
+        {
+          "header": "Server",
+          "value": "ESF",
+          "issue": "Reveals technology stack \u2014 aids attacker fingerprinting"
+        }
+      ],
+      "cookie_issues": [
+        "Missing 'SameSite' flag on Set-Cookie"
+      ],
+      "raw_headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "X-Frame-Options": "DENY",
+        "Set-Cookie": "__Host-GAPS=1:Na8AB_hBRsJUqcmy0ZjpnF5eSefE3A:39i2VqElBojwCFAv; Expires=Tue, 04-Jul-2028 14:43:42 GMT; Path=/; Secure; HttpOnly; Priority=HIGH",
+        "x-auto-login": "realm=com.google&args=continue%3Dhttps://docs.google.com/",
+        "x-ua-compatible": "IE=edge",
+        "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+        "Pragma": "no-cache",
+        "Expires": "Mon, 01 Jan 1990 00:00:00 GMT",
+        "Date": "Sun, 05 Jul 2026 14:43:42 GMT",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+        "Permissions-Policy": "ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factors=*, ch-ua-platform=*, ch-ua-platform-version=*",
+        "Cross-Origin-Opener-Policy-Report-Only": "same-origin; report-to=\"AccountsSignInUi\"",
+        "Content-Security-Policy": "require-trusted-types-for 'script';report-uri /v3/signin/_/AccountsSignInUi/cspreport",
+        "Report-To": "{\"group\":\"AccountsSignInUi\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/AccountsSignInUi\"}]}",
+        "Accept-CH": "Sec-CH-UA-Arch, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Model, Sec-CH-UA-WoW64, Sec-CH-UA-Form-Factors, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version",
+        "Cross-Origin-Resource-Policy": "same-site",
+        "reporting-endpoints": "default=\"/v3/signin/_/AccountsSignInUi/web-reports?context=eJwNyV1IU2EABuCx_F5EvDBbJQsiBkELZmsXc2BdiIgs98u3s1UUy-HEA7WjZ2eSGv03wqAymoJESRSlUUFERTcRFOWF_cxFJ5Wu-pMVVpR0YdR78Vw9VScrNlbZLS0b7JbHjofWpt0frC00XD1vHaUT716IETIuvxR5GqQLtHXilWiirj2vxV7avK4omkkbLYosBRLTIkJDtpIokF5XEsfJ6SsJF6XG3ohOeuI0xXP62W8K24ApmhdN0UqrZmaFnSZLc2KKlg77YTnix5fWNnylu64AHtC16QDOfQpgmJz1QbhoMRtEpRFEOR_CAt0ohHCbGobCaKRb98K4QxXfwrBHI1hL68lJHvLS-LEIbtIMvafM_Qh0evo2gkm6cjqK66Q9iiJLR8tR5On7SolfVFMnYaMGh0Qj_fBK_KZtWyRCNKFIfGyXmKc_tEQrUhKraftViV30-a9EmXr_SXQnYzBogA6RdiCGwEgM_csVHCSzVsEc5VQF_v0K2uhSn4LyKQUL1POMR4NTCs4m4jhP6o449lF8TQI7qba68uLseBE1Y2eKhWWOTSmtJ6l2pDOGavR16lrGSGc62nNGV07NpvXetJ70uD1et9fjq3f7kt3u_9xM08o\"",
+        "Server": "ESF",
+        "X-XSS-Protection": "0",
+        "X-Content-Type-Options": "nosniff",
+        "Alt-Svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "Accept-Ranges": "none",
+        "Vary": "Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site,Accept-Encoding",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      }
+    },
+    {
+      "url": "https://blog.google.com",
+      "status": 200,
+      "score": 14,
+      "grade": "F",
+      "missing_headers": [
+        {
+          "header": "Strict-Transport-Security",
+          "description": "Enforces HTTPS \u2014 prevents SSL stripping attacks",
+          "severity": "High",
+          "recommendation": "Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
+        },
+        {
+          "header": "X-Frame-Options",
+          "description": "Prevents clickjacking via iframe embedding",
+          "severity": "Medium",
+          "recommendation": "X-Frame-Options: DENY"
+        },
+        {
+          "header": "X-Content-Type-Options",
+          "description": "Prevents MIME sniffing \u2014 stops browser from guessing content type",
+          "severity": "Medium",
+          "recommendation": "X-Content-Type-Options: nosniff"
+        },
+        {
+          "header": "Referrer-Policy",
+          "description": "Controls how much referrer info is sent to other sites",
+          "severity": "Low",
+          "recommendation": "Referrer-Policy: strict-origin-when-cross-origin"
+        },
+        {
+          "header": "Permissions-Policy",
+          "description": "Controls browser feature access (camera, microphone, geolocation)",
+          "severity": "Low",
+          "recommendation": "Permissions-Policy: geolocation=(), microphone=(), camera=()"
+        },
+        {
+          "header": "X-XSS-Protection",
+          "description": "Legacy XSS filter for older browsers",
+          "severity": "Info",
+          "recommendation": "X-XSS-Protection: 1; mode=block"
+        }
+      ],
+      "present_headers": [
+        {
+          "header": "Content-Security-Policy",
+          "value": "base-uri 'none'; connect-src 'self' cdn.ampproject.org *.google.com storage.googleapis.com https://services.google.com/fb/submissions/thekeywordtest/ https://services.google.com/fb/submissions/0a65d7733e1f11ea9701614fc033d30c/ *.gstatic.com gstatic.com *.cdn.ampproject.org *.doubleclick.net https://readaloud.googleapis.com/ *.google-analytics.com https://www.youtube.com/; require-trusted-types-for 'script'; style-src 'self' 'unsafe-inline' fonts.googleapis.com *.gstatic.com storage.googleapis.com *.google.com cdn.ampproject.org gstatic.com; img-src * data: blob:; media-src 'self' data: *.gstatic.com storage.googleapis.com *.googlevideo.com; font-src 'self' themes.googleusercontent.com *.gstatic.com https://fonts.gstatic.com storage.googleapis.com fonts.googleapis.com *.cdn.ampproject.org; frame-src 'self' www.google.com *.youtube.com youtube.com accounts.google.com *.doubleclick.net apis.google.com optimize.google.com *.google.com *.withgoogle.com *.cdn.ampproject.org https://www.gstatic.com/ https://www.youtube-nocookie.com/; script-src 'self' 'strict-dynamic' 'unsafe-inline' *.googleanalytics.com *.google-analytics.com *.youtube.com youtube.com optimize.google.com https://s.ytimg.com *.googletagmanager.com storage.googleapis.com *.googleapis.com *.google.com cdn.ampproject.org *.gstatic.com gstatic.com googleadservices.com *.googleadservices.com 'sha256-hdPneczWRi+c9LQVo+PzNzlNr9TacChC0CW0fiDBHkI=' 'sha256-DE/j4w1a1HDIXysWgFTrJCJK6JWEcHqScfyMr9zq9R4=' 'sha256-Ehy9lGqrTi8OqqWxX1HN6hKJT7iwwYMFJ+HLjpEobO0=' 'sha256-s/yvuH0ZHyO+7N8dM5CshPem4K1PknDExYN18xHq0LI=' 'sha256-MWQdkIAX5J//suH1t5P3PFFwFUiphY0PxD6VVzbBehQ=' 'sha256-587vJAV9t9k86IMQixmyKa7lbPaDhkGzrJsdngtoiAA=' 'sha256-nlbIOie3vmdUUZjQFDMa7iipxS6Qst8pPhTLjibMsRk=' 'sha256-+LJ+tgqOXIri3+D/uJC785tov3eXewv8x+Pkenx+3Z8=' 'sha256-PnD9J8UK8zpwVizQXkEtbZOvTiv9C/05Nn81NEwPBoQ=' 'sha256-LH1mE8uiAlSGs6/ejmL47sTk8G+/Hh6T1ydVxa0idaM=' 'sha256-GuPeLJgWIkkS7hCKcSc+mQs6jTN0D8QzfW624B4OMME=' 'sha256-CDqe41szG4ZmAxS54wSNKisRTrwu1wxcuRQv09PB3Nk=' 'sha256-Xyk5Ei/Yh7DuZgaxNfbPswkpmMKHk5Jy18vkxjfPMj0=' 'sha256-Q+8W9SyZ6wnayM05rLv0YuHooUH/nnzpE2XQZJ/ekjY=' 'sha256-1lOrojGb+aoV56bZpsODLpb+j+HHbONNEpX/YqVtiUU=' 'sha256-sAsQphoZozaLVFpcda3bvT5euqcGL4MqVnizAR+Xla4=' 'sha256-ZlqdbaXB1F4Evuv/nmY3QGBLFBbrfiNndyYxbgdQn7g=' 'sha256-OEwIbDcQTxJYhU2ONmKA0LutIDdkmge2c+9IPFv5vFE=' 'sha256-Iz9ZZz/rHQFiJs2bKOHSC82gR0WdD/37qrPCB65PCFg='; object-src 'none'; default-src 'self' *.gstatic.com storage.googleapis.com"
+        }
+      ],
+      "weak_headers": [
+        {
+          "header": "Content-Security-Policy",
+          "value": "base-uri 'none'; connect-src 'self' cdn.ampproject.org *.google.com storage.googleapis.com https://services.google.com/fb/submissions/thekeywordtest/ https://services.google.com/fb/submissions/0a65d7733e1f11ea9701614fc033d30c/ *.gstatic.com gstatic.com *.cdn.ampproject.org *.doubleclick.net https://readaloud.googleapis.com/ *.google-analytics.com https://www.youtube.com/; require-trusted-types-for 'script'; style-src 'self' 'unsafe-inline' fonts.googleapis.com *.gstatic.com storage.googleapis.com *.google.com cdn.ampproject.org gstatic.com; img-src * data: blob:; media-src 'self' data: *.gstatic.com storage.googleapis.com *.googlevideo.com; font-src 'self' themes.googleusercontent.com *.gstatic.com https://fonts.gstatic.com storage.googleapis.com fonts.googleapis.com *.cdn.ampproject.org; frame-src 'self' www.google.com *.youtube.com youtube.com accounts.google.com *.doubleclick.net apis.google.com optimize.google.com *.google.com *.withgoogle.com *.cdn.ampproject.org https://www.gstatic.com/ https://www.youtube-nocookie.com/; script-src 'self' 'strict-dynamic' 'unsafe-inline' *.googleanalytics.com *.google-analytics.com *.youtube.com youtube.com optimize.google.com https://s.ytimg.com *.googletagmanager.com storage.googleapis.com *.googleapis.com *.google.com cdn.ampproject.org *.gstatic.com gstatic.com googleadservices.com *.googleadservices.com 'sha256-hdPneczWRi+c9LQVo+PzNzlNr9TacChC0CW0fiDBHkI=' 'sha256-DE/j4w1a1HDIXysWgFTrJCJK6JWEcHqScfyMr9zq9R4=' 'sha256-Ehy9lGqrTi8OqqWxX1HN6hKJT7iwwYMFJ+HLjpEobO0=' 'sha256-s/yvuH0ZHyO+7N8dM5CshPem4K1PknDExYN18xHq0LI=' 'sha256-MWQdkIAX5J//suH1t5P3PFFwFUiphY0PxD6VVzbBehQ=' 'sha256-587vJAV9t9k86IMQixmyKa7lbPaDhkGzrJsdngtoiAA=' 'sha256-nlbIOie3vmdUUZjQFDMa7iipxS6Qst8pPhTLjibMsRk=' 'sha256-+LJ+tgqOXIri3+D/uJC785tov3eXewv8x+Pkenx+3Z8=' 'sha256-PnD9J8UK8zpwVizQXkEtbZOvTiv9C/05Nn81NEwPBoQ=' 'sha256-LH1mE8uiAlSGs6/ejmL47sTk8G+/Hh6T1ydVxa0idaM=' 'sha256-GuPeLJgWIkkS7hCKcSc+mQs6jTN0D8QzfW624B4OMME=' 'sha256-CDqe41szG4ZmAxS54wSNKisRTrwu1wxcuRQv09PB3Nk=' 'sha256-Xyk5Ei/Yh7DuZgaxNfbPswkpmMKHk5Jy18vkxjfPMj0=' 'sha256-Q+8W9SyZ6wnayM05rLv0YuHooUH/nnzpE2XQZJ/ekjY=' 'sha256-1lOrojGb+aoV56bZpsODLpb+j+HHbONNEpX/YqVtiUU=' 'sha256-sAsQphoZozaLVFpcda3bvT5euqcGL4MqVnizAR+Xla4=' 'sha256-ZlqdbaXB1F4Evuv/nmY3QGBLFBbrfiNndyYxbgdQn7g=' 'sha256-OEwIbDcQTxJYhU2ONmKA0LutIDdkmge2c+9IPFv5vFE=' 'sha256-Iz9ZZz/rHQFiJs2bKOHSC82gR0WdD/37qrPCB65PCFg='; object-src 'none'; default-src 'self' *.gstatic.com storage.googleapis.com",
+          "issue": "Contains dangerous value: 'unsafe-inline'",
+          "severity": "High"
+        },
+        {
+          "header": "Content-Security-Policy",
+          "value": "base-uri 'none'; connect-src 'self' cdn.ampproject.org *.google.com storage.googleapis.com https://services.google.com/fb/submissions/thekeywordtest/ https://services.google.com/fb/submissions/0a65d7733e1f11ea9701614fc033d30c/ *.gstatic.com gstatic.com *.cdn.ampproject.org *.doubleclick.net https://readaloud.googleapis.com/ *.google-analytics.com https://www.youtube.com/; require-trusted-types-for 'script'; style-src 'self' 'unsafe-inline' fonts.googleapis.com *.gstatic.com storage.googleapis.com *.google.com cdn.ampproject.org gstatic.com; img-src * data: blob:; media-src 'self' data: *.gstatic.com storage.googleapis.com *.googlevideo.com; font-src 'self' themes.googleusercontent.com *.gstatic.com https://fonts.gstatic.com storage.googleapis.com fonts.googleapis.com *.cdn.ampproject.org; frame-src 'self' www.google.com *.youtube.com youtube.com accounts.google.com *.doubleclick.net apis.google.com optimize.google.com *.google.com *.withgoogle.com *.cdn.ampproject.org https://www.gstatic.com/ https://www.youtube-nocookie.com/; script-src 'self' 'strict-dynamic' 'unsafe-inline' *.googleanalytics.com *.google-analytics.com *.youtube.com youtube.com optimize.google.com https://s.ytimg.com *.googletagmanager.com storage.googleapis.com *.googleapis.com *.google.com cdn.ampproject.org *.gstatic.com gstatic.com googleadservices.com *.googleadservices.com 'sha256-hdPneczWRi+c9LQVo+PzNzlNr9TacChC0CW0fiDBHkI=' 'sha256-DE/j4w1a1HDIXysWgFTrJCJK6JWEcHqScfyMr9zq9R4=' 'sha256-Ehy9lGqrTi8OqqWxX1HN6hKJT7iwwYMFJ+HLjpEobO0=' 'sha256-s/yvuH0ZHyO+7N8dM5CshPem4K1PknDExYN18xHq0LI=' 'sha256-MWQdkIAX5J//suH1t5P3PFFwFUiphY0PxD6VVzbBehQ=' 'sha256-587vJAV9t9k86IMQixmyKa7lbPaDhkGzrJsdngtoiAA=' 'sha256-nlbIOie3vmdUUZjQFDMa7iipxS6Qst8pPhTLjibMsRk=' 'sha256-+LJ+tgqOXIri3+D/uJC785tov3eXewv8x+Pkenx+3Z8=' 'sha256-PnD9J8UK8zpwVizQXkEtbZOvTiv9C/05Nn81NEwPBoQ=' 'sha256-LH1mE8uiAlSGs6/ejmL47sTk8G+/Hh6T1ydVxa0idaM=' 'sha256-GuPeLJgWIkkS7hCKcSc+mQs6jTN0D8QzfW624B4OMME=' 'sha256-CDqe41szG4ZmAxS54wSNKisRTrwu1wxcuRQv09PB3Nk=' 'sha256-Xyk5Ei/Yh7DuZgaxNfbPswkpmMKHk5Jy18vkxjfPMj0=' 'sha256-Q+8W9SyZ6wnayM05rLv0YuHooUH/nnzpE2XQZJ/ekjY=' 'sha256-1lOrojGb+aoV56bZpsODLpb+j+HHbONNEpX/YqVtiUU=' 'sha256-sAsQphoZozaLVFpcda3bvT5euqcGL4MqVnizAR+Xla4=' 'sha256-ZlqdbaXB1F4Evuv/nmY3QGBLFBbrfiNndyYxbgdQn7g=' 'sha256-OEwIbDcQTxJYhU2ONmKA0LutIDdkmge2c+9IPFv5vFE=' 'sha256-Iz9ZZz/rHQFiJs2bKOHSC82gR0WdD/37qrPCB65PCFg='; object-src 'none'; default-src 'self' *.gstatic.com storage.googleapis.com",
+          "issue": "Contains dangerous value: '*'",
+          "severity": "High"
+        }
+      ],
+      "leaky_headers": [
+        {
+          "header": "Server",
+          "value": "Google Frontend",
+          "issue": "Reveals technology stack \u2014 aids attacker fingerprinting"
+        }
+      ],
+      "cookie_issues": [],
+      "raw_headers": {
+        "content-type": "text/html; charset=utf-8",
+        "vary": "Accept-Encoding",
+        "content-security-policy": "base-uri 'none'; connect-src 'self' cdn.ampproject.org *.google.com storage.googleapis.com https://services.google.com/fb/submissions/thekeywordtest/ https://services.google.com/fb/submissions/0a65d7733e1f11ea9701614fc033d30c/ *.gstatic.com gstatic.com *.cdn.ampproject.org *.doubleclick.net https://readaloud.googleapis.com/ *.google-analytics.com https://www.youtube.com/; require-trusted-types-for 'script'; style-src 'self' 'unsafe-inline' fonts.googleapis.com *.gstatic.com storage.googleapis.com *.google.com cdn.ampproject.org gstatic.com; img-src * data: blob:; media-src 'self' data: *.gstatic.com storage.googleapis.com *.googlevideo.com; font-src 'self' themes.googleusercontent.com *.gstatic.com https://fonts.gstatic.com storage.googleapis.com fonts.googleapis.com *.cdn.ampproject.org; frame-src 'self' www.google.com *.youtube.com youtube.com accounts.google.com *.doubleclick.net apis.google.com optimize.google.com *.google.com *.withgoogle.com *.cdn.ampproject.org https://www.gstatic.com/ https://www.youtube-nocookie.com/; script-src 'self' 'strict-dynamic' 'unsafe-inline' *.googleanalytics.com *.google-analytics.com *.youtube.com youtube.com optimize.google.com https://s.ytimg.com *.googletagmanager.com storage.googleapis.com *.googleapis.com *.google.com cdn.ampproject.org *.gstatic.com gstatic.com googleadservices.com *.googleadservices.com 'sha256-hdPneczWRi+c9LQVo+PzNzlNr9TacChC0CW0fiDBHkI=' 'sha256-DE/j4w1a1HDIXysWgFTrJCJK6JWEcHqScfyMr9zq9R4=' 'sha256-Ehy9lGqrTi8OqqWxX1HN6hKJT7iwwYMFJ+HLjpEobO0=' 'sha256-s/yvuH0ZHyO+7N8dM5CshPem4K1PknDExYN18xHq0LI=' 'sha256-MWQdkIAX5J//suH1t5P3PFFwFUiphY0PxD6VVzbBehQ=' 'sha256-587vJAV9t9k86IMQixmyKa7lbPaDhkGzrJsdngtoiAA=' 'sha256-nlbIOie3vmdUUZjQFDMa7iipxS6Qst8pPhTLjibMsRk=' 'sha256-+LJ+tgqOXIri3+D/uJC785tov3eXewv8x+Pkenx+3Z8=' 'sha256-PnD9J8UK8zpwVizQXkEtbZOvTiv9C/05Nn81NEwPBoQ=' 'sha256-LH1mE8uiAlSGs6/ejmL47sTk8G+/Hh6T1ydVxa0idaM=' 'sha256-GuPeLJgWIkkS7hCKcSc+mQs6jTN0D8QzfW624B4OMME=' 'sha256-CDqe41szG4ZmAxS54wSNKisRTrwu1wxcuRQv09PB3Nk=' 'sha256-Xyk5Ei/Yh7DuZgaxNfbPswkpmMKHk5Jy18vkxjfPMj0=' 'sha256-Q+8W9SyZ6wnayM05rLv0YuHooUH/nnzpE2XQZJ/ekjY=' 'sha256-1lOrojGb+aoV56bZpsODLpb+j+HHbONNEpX/YqVtiUU=' 'sha256-sAsQphoZozaLVFpcda3bvT5euqcGL4MqVnizAR+Xla4=' 'sha256-ZlqdbaXB1F4Evuv/nmY3QGBLFBbrfiNndyYxbgdQn7g=' 'sha256-OEwIbDcQTxJYhU2ONmKA0LutIDdkmge2c+9IPFv5vFE=' 'sha256-Iz9ZZz/rHQFiJs2bKOHSC82gR0WdD/37qrPCB65PCFg='; object-src 'none'; default-src 'self' *.gstatic.com storage.googleapis.com",
+        "content-language": "en-us",
+        "access-control-allow-origin": "*",
+        "x-cloud-trace-context": "450d1fe9f15d6deeba4d024b267ee879",
+        "date": "Sun, 05 Jul 2026 14:43:42 GMT",
+        "server": "Google Frontend",
+        "Content-Length": "389721",
+        "Connection": "close"
+      }
+    },
+    {
+      "url": "https://support.google.com",
+      "status": 200,
+      "score": 57,
+      "grade": "D",
+      "missing_headers": [
+        {
+          "header": "Content-Security-Policy",
+          "description": "Controls which resources can load \u2014 prevents XSS",
+          "severity": "High",
+          "recommendation": "Content-Security-Policy: default-src 'self'; script-src 'self'"
+        },
+        {
+          "header": "Referrer-Policy",
+          "description": "Controls how much referrer info is sent to other sites",
+          "severity": "Low",
+          "recommendation": "Referrer-Policy: strict-origin-when-cross-origin"
+        },
+        {
+          "header": "Permissions-Policy",
+          "description": "Controls browser feature access (camera, microphone, geolocation)",
+          "severity": "Low",
+          "recommendation": "Permissions-Policy: geolocation=(), microphone=(), camera=()"
+        }
+      ],
+      "present_headers": [
+        {
+          "header": "Strict-Transport-Security",
+          "value": "max-age=31536000; includeSubdomains"
+        },
+        {
+          "header": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "header": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "header": "X-XSS-Protection",
+          "value": "0"
+        }
+      ],
+      "weak_headers": [
+        {
+          "header": "X-XSS-Protection",
+          "value": "0",
+          "issue": "Contains dangerous value: '0'",
+          "severity": "Info"
+        }
+      ],
+      "leaky_headers": [
+        {
+          "header": "Server",
+          "value": "support-content-ui",
+          "issue": "Reveals technology stack \u2014 aids attacker fingerprinting"
+        }
+      ],
+      "cookie_issues": [
+        "Missing 'Secure' flag on Set-Cookie",
+        "Missing 'SameSite' flag on Set-Cookie"
+      ],
+      "raw_headers": {
+        "P3P": "CP=\"This is not a P3P policy! See g.co/p3phelp for more info.\"",
+        "Strict-Transport-Security": "max-age=31536000; includeSubdomains",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Date": "Sun, 05 Jul 2026 14:43:42 GMT",
+        "Expires": "Sun, 05 Jul 2026 14:43:42 GMT",
+        "Cache-Control": "private, max-age=0",
+        "Content-Security-Policy-Report-Only": "object-src 'none';base-uri 'self';script-src 'nonce-oCouWlNybvRY3NKGpcWr' 'unsafe-inline' 'unsafe-eval' 'strict-dynamic' https: http: 'report-sample';report-uri https://csp.withgoogle.com/csp/scfe",
+        "X-Content-Type-Options": "nosniff",
+        "Server": "support-content-ui",
+        "X-XSS-Protection": "0",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Set-Cookie": "NID=532=b8sv19-MTtXclW7KuESS1l48PUefGxKgBCI4HvP4rBjTzi-VZ8mT9iSH7T_cAQDxND4LoYw4Hc4fUhDD2OtUOo3O_UJxadZs8fhTXzAKB6pT24-7FQPu_OmixzOa1T4hp-Qi65XBAOuKuYYuPi3PWi7ylZrukpTPy3qWoqzRFIyQlqnMk6-zTXKyit8SpCDQHUJZg9Q; expires=Mon, 04-Jan-2027 14:43:42 GMT; path=/; domain=.google.com; HttpOnly",
+        "Alt-Svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "Accept-Ranges": "none",
+        "Vary": "Accept-Encoding",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      }
+    },
+    {
+      "url": "https://help.google.com",
+      "status": 200,
+      "score": 57,
+      "grade": "D",
+      "missing_headers": [
+        {
+          "header": "Content-Security-Policy",
+          "description": "Controls which resources can load \u2014 prevents XSS",
+          "severity": "High",
+          "recommendation": "Content-Security-Policy: default-src 'self'; script-src 'self'"
+        },
+        {
+          "header": "Referrer-Policy",
+          "description": "Controls how much referrer info is sent to other sites",
+          "severity": "Low",
+          "recommendation": "Referrer-Policy: strict-origin-when-cross-origin"
+        },
+        {
+          "header": "Permissions-Policy",
+          "description": "Controls browser feature access (camera, microphone, geolocation)",
+          "severity": "Low",
+          "recommendation": "Permissions-Policy: geolocation=(), microphone=(), camera=()"
+        }
+      ],
+      "present_headers": [
+        {
+          "header": "Strict-Transport-Security",
+          "value": "max-age=31536000; includeSubdomains"
+        },
+        {
+          "header": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "header": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "header": "X-XSS-Protection",
+          "value": "0"
+        }
+      ],
+      "weak_headers": [
+        {
+          "header": "X-XSS-Protection",
+          "value": "0",
+          "issue": "Contains dangerous value: '0'",
+          "severity": "Info"
+        }
+      ],
+      "leaky_headers": [
+        {
+          "header": "Server",
+          "value": "support-content-ui",
+          "issue": "Reveals technology stack \u2014 aids attacker fingerprinting"
+        }
+      ],
+      "cookie_issues": [
+        "Missing 'Secure' flag on Set-Cookie",
+        "Missing 'SameSite' flag on Set-Cookie"
+      ],
+      "raw_headers": {
+        "P3P": "CP=\"This is not a P3P policy! See g.co/p3phelp for more info.\"",
+        "Strict-Transport-Security": "max-age=31536000; includeSubdomains",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Date": "Sun, 05 Jul 2026 14:43:43 GMT",
+        "Expires": "Sun, 05 Jul 2026 14:43:43 GMT",
+        "Cache-Control": "private, max-age=0",
+        "Content-Security-Policy-Report-Only": "object-src 'none';base-uri 'self';script-src 'nonce-23eWi8IG7T+HAOpa0QnS' 'unsafe-inline' 'unsafe-eval' 'strict-dynamic' https: http: 'report-sample';report-uri https://csp.withgoogle.com/csp/scfe",
+        "X-Content-Type-Options": "nosniff",
+        "Server": "support-content-ui",
+        "X-XSS-Protection": "0",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Set-Cookie": "NID=532=mij8eTxWDwK3XHlIC1nPv8nJB88hPKujGKtMl6GXnr3jAzjkvLMo7TkeeT3DCEgSSj4Ieh0nb6sA6IkhIssx_7sMdWoCrnUo2lcriUBvIU34T8kqK1FKsujDJoATDmWO8GUWX5QzcdODsw-OR5d97T4qihPLRygpwsB3CXoKCf_ZiEPrEHrPfEFGFpQFhhJoYOLy3Q; expires=Mon, 04-Jan-2027 14:43:43 GMT; path=/; domain=.google.com; HttpOnly",
+        "Alt-Svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "Accept-Ranges": "none",
+        "Vary": "Accept-Encoding",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      }
+    },
+    {
+      "url": "https://mail.google.com",
+      "status": 200,
+      "score": 86,
+      "grade": "B",
+      "missing_headers": [
+        {
+          "header": "Referrer-Policy",
+          "description": "Controls how much referrer info is sent to other sites",
+          "severity": "Low",
+          "recommendation": "Referrer-Policy: strict-origin-when-cross-origin"
+        }
+      ],
+      "present_headers": [
+        {
+          "header": "Strict-Transport-Security",
+          "value": "max-age=31536000; includeSubDomains"
+        },
+        {
+          "header": "Content-Security-Policy",
+          "value": "require-trusted-types-for 'script';report-uri /v3/signin/_/AccountsSignInUi/cspreport"
+        },
+        {
+          "header": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "header": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "header": "Permissions-Policy",
+          "value": "ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factors=*, ch-ua-platform=*, ch-ua-platform-version=*"
+        },
+        {
+          "header": "X-XSS-Protection",
+          "value": "0"
+        }
+      ],
+      "weak_headers": [
+        {
+          "header": "X-XSS-Protection",
+          "value": "0",
+          "issue": "Contains dangerous value: '0'",
+          "severity": "Info"
+        }
+      ],
+      "leaky_headers": [
+        {
+          "header": "Server",
+          "value": "ESF",
+          "issue": "Reveals technology stack \u2014 aids attacker fingerprinting"
+        }
+      ],
+      "cookie_issues": [
+        "Missing 'SameSite' flag on Set-Cookie"
+      ],
+      "raw_headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "X-Frame-Options": "DENY",
+        "Set-Cookie": "__Host-GAPS=1:Z7485ewc2Zl4K3zrEiznBONQ_R3fow:A5MmVvIQKXpvcaDQ; Expires=Tue, 04-Jul-2028 14:43:43 GMT; Path=/; Secure; HttpOnly; Priority=HIGH",
+        "x-auto-login": "realm=com.google&args=service%3Dmail%26continue%3Dhttps://mail.google.com/mail/u/0/",
+        "Link": "<https://workspace.google.com/gmail/>; rel=\"canonical\"",
+        "x-ua-compatible": "IE=edge",
+        "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+        "Pragma": "no-cache",
+        "Expires": "Mon, 01 Jan 1990 00:00:00 GMT",
+        "Date": "Sun, 05 Jul 2026 14:43:43 GMT",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+        "Accept-CH": "Sec-CH-UA-Arch, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Model, Sec-CH-UA-WoW64, Sec-CH-UA-Form-Factors, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version",
+        "Content-Security-Policy": "require-trusted-types-for 'script';report-uri /v3/signin/_/AccountsSignInUi/cspreport",
+        "Cross-Origin-Opener-Policy-Report-Only": "same-origin; report-to=\"AccountsSignInUi\"",
+        "Report-To": "{\"group\":\"AccountsSignInUi\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/AccountsSignInUi\"}]}",
+        "Cross-Origin-Resource-Policy": "same-site",
+        "Permissions-Policy": "ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factors=*, ch-ua-platform=*, ch-ua-platform-version=*",
+        "reporting-endpoints": "default=\"/v3/signin/_/AccountsSignInUi/web-reports?context=eJwNw01Ik2EAB_C1fP6EeLBlJQsiBkELZmuHObAOEiXLfb08e7eKYjmcOLBNt3cjNfqw2mFBZDSDERhRlEYFEX1d7JDUDpbNRctJXfqSFVaUdDDq_4Nf7aWazbVG3a5NRt0T02N964EP-p08Ujevz_Ppty9EjrUrL8UpznKet49Pi1buPvhK9PDWDUXRyvF8USTZFZwRPh5uKIkcJxpLYojNjpKwcPjya9HFT81l8Zx_DpSFYbAsdiyWRRuvma0IIxdKc2KKl447oTvhRGZZO7L8pa0dX_mexYWHfH3GhfOfXBhhc5MbFl5MugHNjWrGgwW-mfPgDjcPe9HCt-97cZdrvnlhVHxYzxvZzDa289hJH27xLL_j2AMfEjz5xocCT_YoKPDVswpucHxCQZIrBQXveaiqIMPfV0v84vpGiQZuNkm08A-7xG_evU3Cw-OqxMcOiXn-w0u8Kiyxlvdck9jPn_9KVDn9T6I35IfGg3yM40f8cF30Y2CliqNcNqiY43RUhfOwitF-FdUzKha475mKFGenVJwLBnCBo3sDOMSBdUHsY0PditHKWBH109WJR8tNW8LxvlC0MxLTolp_VyIe0yKxzo6U1p2KJiOJdCQRslltdqvd5miyOkK91v8Wa9wT\"",
+        "Server": "ESF",
+        "X-XSS-Protection": "0",
+        "X-Content-Type-Options": "nosniff",
+        "Alt-Svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "Accept-Ranges": "none",
+        "Vary": "Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site,Accept-Encoding",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      }
+    },
+    {
+      "url": "https://admin.google.com",
+      "status": 302,
+      "score": 14,
+      "grade": "F",
+      "missing_headers": [
+        {
+          "header": "Strict-Transport-Security",
+          "description": "Enforces HTTPS \u2014 prevents SSL stripping attacks",
+          "severity": "High",
+          "recommendation": "Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
+        },
+        {
+          "header": "Content-Security-Policy",
+          "description": "Controls which resources can load \u2014 prevents XSS",
+          "severity": "High",
+          "recommendation": "Content-Security-Policy: default-src 'self'; script-src 'self'"
+        },
+        {
+          "header": "X-Frame-Options",
+          "description": "Prevents clickjacking via iframe embedding",
+          "severity": "Medium",
+          "recommendation": "X-Frame-Options: DENY"
+        },
+        {
+          "header": "X-Content-Type-Options",
+          "description": "Prevents MIME sniffing \u2014 stops browser from guessing content type",
+          "severity": "Medium",
+          "recommendation": "X-Content-Type-Options: nosniff"
+        },
+        {
+          "header": "Referrer-Policy",
+          "description": "Controls how much referrer info is sent to other sites",
+          "severity": "Low",
+          "recommendation": "Referrer-Policy: strict-origin-when-cross-origin"
+        },
+        {
+          "header": "Permissions-Policy",
+          "description": "Controls browser feature access (camera, microphone, geolocation)",
+          "severity": "Low",
+          "recommendation": "Permissions-Policy: geolocation=(), microphone=(), camera=()"
+        }
+      ],
+      "present_headers": [
+        {
+          "header": "X-XSS-Protection",
+          "value": "0"
+        }
+      ],
+      "weak_headers": [
+        {
+          "header": "X-XSS-Protection",
+          "value": "0",
+          "issue": "Contains dangerous value: '0'",
+          "severity": "Info"
+        }
+      ],
+      "leaky_headers": [
+        {
+          "header": "Server",
+          "value": "scaffolding on HTTPServer2",
+          "issue": "Reveals technology stack \u2014 aids attacker fingerprinting"
+        }
+      ],
+      "cookie_issues": [],
+      "raw_headers": {
+        "Location": "https://admin.google.com/?google_abuse=GOOGLE_ABUSE_EXEMPTION%3DID%3Db9a3469aa8493738:TM%3D1783262626:C%3D%3E:IP%3D122.167.158.133-:S%3D-BKoMCxbE6fJ2gttOiAKmA%3B+path%3D/%3B+domain%3Dgoogle.com%3B+expires%3DSun,+05-Jul-2026+17:43:46+GMT",
+        "Date": "Sun, 05 Jul 2026 14:43:46 GMT",
+        "Pragma": "no-cache",
+        "Expires": "Fri, 01 Jan 1990 00:00:00 GMT",
+        "Cache-Control": "no-store, no-cache, must-revalidate",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Server": "scaffolding on HTTPServer2",
+        "Content-Length": "433",
+        "X-XSS-Protection": "0",
+        "Alt-Svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "Connection": "close"
+      }
+    }
+  ],
+  "screenshots": [],
+  "elapsed": 153.52
+}
